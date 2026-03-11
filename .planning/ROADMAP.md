@@ -45,9 +45,10 @@ Plans:
   3. Photo gallery displays images in a grid/carousel with lightbox view and all images lazy-load
   4. Our Story timeline shows relationship milestones with photos and scroll-triggered animations
   5. Pre-wedding video section shows a thumbnail that loads the video player only on click (no eager iframe)
-**Plans:** 3 plans
+**Plans:** 4 plans
 
 Plans:
+- [ ] 02-00-PLAN.md — Wave 0 test stubs and shared test setup
 - [ ] 02-01-PLAN.md — Data layer, shared utilities, hero section with countdown, and Our Story timeline
 - [ ] 02-02-PLAN.md — Event timeline with color-coded cards, photo gallery with lightbox, and video section
 - [ ] 02-03-PLAN.md — Build verification and visual checkpoint for all presentation sections
@@ -90,6 +91,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation + Design System | 2/2 | Complete   | 2026-03-11 |
-| 2. Presentation Sections | 0/3 | Not started | - |
+| 2. Presentation Sections | 0/4 | Not started | - |
 | 3. RSVP System | 0/2 | Not started | - |
 | 4. Polish + Launch Verification | 0/1 | Not started | - |
