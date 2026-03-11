@@ -7,26 +7,26 @@
 
 ### Hero & Landing
 
-- [ ] **HERO-01**: Hero section with couple names in Hindi + English and wedding date
-- [ ] **HERO-02**: Live countdown timer showing days/hours/minutes to wedding day
+- [x] **HERO-01**: Hero section with couple names in Hindi + English and wedding date
+- [x] **HERO-02**: Live countdown timer showing days/hours/minutes to wedding day
 - [x] **HERO-03**: WhatsApp-optimized OG meta tags for beautiful link previews
 
 ### Event Details
 
-- [ ] **EVNT-01**: Event details for all 5 events (Tilak, Mehndi, Sangeet, Haldi, Shadi) with date, time, venue, dress code, and Google Maps link
-- [ ] **EVNT-02**: Per-event visual identity with distinct color accents per event section
-- [ ] **EVNT-03**: Dress code visuals/suggestions per event
+- [x] **EVNT-01**: Event details for all 5 events (Tilak, Mehndi, Sangeet, Haldi, Shadi) with date, time, venue, dress code, and Google Maps link
+- [x] **EVNT-02**: Per-event visual identity with distinct color accents per event section
+- [x] **EVNT-03**: Dress code visuals/suggestions per event
 
 ### Content & Media
 
-- [ ] **CONT-01**: Photo gallery with grid/carousel layout, lightbox view, and lazy loading
+- [x] **CONT-01**: Photo gallery with grid/carousel layout, lightbox view, and lazy loading
 - [x] **CONT-02**: Bilingual content — Hindi for headers/blessings, English for logistics
-- [ ] **CONT-03**: "Our Story" relationship timeline with milestones and photos
-- [ ] **CONT-04**: Embedded pre-wedding video (YouTube/Vimeo, lazy-loaded)
+- [x] **CONT-03**: "Our Story" relationship timeline with milestones and photos
+- [x] **CONT-04**: Embedded pre-wedding video (YouTube/Vimeo, lazy-loaded)
 
 ### Animations & Design
 
-- [ ] **ANIM-01**: Scroll-triggered animations (fade-in, parallax, slide effects)
+- [x] **ANIM-01**: Scroll-triggered animations (fade-in, parallax, slide effects)
 - [x] **ANIM-02**: Bold, vibrant visual design — rich colors, large typography, dramatic layouts
 
 ### RSVP
@@ -66,17 +66,17 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| HERO-01 | Phase 2 | Pending |
-| HERO-02 | Phase 2 | Pending |
+| HERO-01 | Phase 2 | Complete |
+| HERO-02 | Phase 2 | Complete |
 | HERO-03 | Phase 1 | Complete |
-| EVNT-01 | Phase 2 | Pending |
-| EVNT-02 | Phase 2 | Pending |
-| EVNT-03 | Phase 2 | Pending |
-| CONT-01 | Phase 2 | Pending |
+| EVNT-01 | Phase 2 | Complete |
+| EVNT-02 | Phase 2 | Complete |
+| EVNT-03 | Phase 2 | Complete |
+| CONT-01 | Phase 2 | Complete |
 | CONT-02 | Phase 1 | Complete |
-| CONT-03 | Phase 2 | Pending |
-| CONT-04 | Phase 2 | Pending |
-| ANIM-01 | Phase 2 | Pending |
+| CONT-03 | Phase 2 | Complete |
+| CONT-04 | Phase 2 | Complete |
+| ANIM-01 | Phase 2 | Complete |
 | ANIM-02 | Phase 1 | Complete |
 | RSVP-01 | Phase 3 | Pending |
 | RSVP-02 | Phase 3 | Pending |
