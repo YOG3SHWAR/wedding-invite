@@ -1,0 +1,40 @@
+import type { Metadata } from 'next'
+import { yatraOne, playfairDisplay, cormorantGaramond } from '@/lib/fonts'
+import { AnimationProvider } from '@/components/providers/animation-provider'
+import './globals.css'
+
+export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  title: 'Yogi & Sudha Wedding',
+  description: 'Join us for our wedding celebration! 28 April 2026',
+  openGraph: {
+    title: 'Yogi & Sudha Wedding',
+    description: 'Join us for our wedding celebration! 28 April 2026',
+    type: 'website',
+    images: [
+      {
+        url: '/opengraph-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Yogi & Sudha Wedding Invitation',
+      },
+    ],
+  },
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html
+      lang="en"
+      className={`${yatraOne.variable} ${playfairDisplay.variable} ${cormorantGaramond.variable}`}
+    >
+      <body className="bg-cream text-maroon-dark font-body antialiased">
+        <AnimationProvider>{children}</AnimationProvider>
+      </body>
+    </html>
+  )
+}
