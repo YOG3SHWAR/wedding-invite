@@ -32,8 +32,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans:** 2/2 plans complete
 
 Plans:
-- [ ] 01-01-PLAN.md — Scaffold Next.js project with design system tokens, fonts, ScrollReveal animation, OG metadata, and unit tests
-- [ ] 01-02-PLAN.md — Build/test verification and visual checkpoint for design system approval
+- [x] 01-01-PLAN.md — Scaffold Next.js project with design system tokens, fonts, ScrollReveal animation, OG metadata, and unit tests
+- [x] 01-02-PLAN.md — Build/test verification and visual checkpoint for design system approval
 
 ### Phase 2: Presentation Sections
 **Goal**: Guests can scroll through the complete wedding story -- hero with countdown, all 5 event details with venues and maps, photo gallery, Our Story timeline, and pre-wedding video -- with smooth scroll-triggered animations throughout
@@ -45,12 +45,12 @@ Plans:
   3. Photo gallery displays images in a grid/carousel with lightbox view and all images lazy-load
   4. Our Story timeline shows relationship milestones with photos and scroll-triggered animations
   5. Pre-wedding video section shows a thumbnail that loads the video player only on click (no eager iframe)
-**Plans**: TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
-- [ ] 02-03: TBD
+- [ ] 02-01-PLAN.md — Data layer, shared utilities, hero section with countdown, and Our Story timeline
+- [ ] 02-02-PLAN.md — Event timeline with color-coded cards, photo gallery with lightbox, and video section
+- [ ] 02-03-PLAN.md — Build verification and visual checkpoint for all presentation sections
 
 ### Phase 3: RSVP System
 **Goal**: Guests can RSVP by selecting which days they will attend, with their response stored in Firebase and confirmed on screen -- the form is dead-simple for non-tech-savvy family members on mobile
