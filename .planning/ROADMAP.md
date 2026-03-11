@@ -29,11 +29,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. A reusable scroll animation wrapper (fade-in) works on a test element and respects prefers-reduced-motion
   4. Page loads under 3 seconds on throttled 4G in Chrome DevTools and layout is mobile-first responsive
   5. WhatsApp link preview shows correct OG meta tags (couple names, wedding date, preview image)
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md — Scaffold Next.js project with design system tokens, fonts, ScrollReveal animation, OG metadata, and unit tests
+- [ ] 01-02-PLAN.md — Build/test verification and visual checkpoint for design system approval
 
 ### Phase 2: Presentation Sections
 **Goal**: Guests can scroll through the complete wedding story -- hero with countdown, all 5 event details with venues and maps, photo gallery, Our Story timeline, and pre-wedding video -- with smooth scroll-triggered animations throughout
