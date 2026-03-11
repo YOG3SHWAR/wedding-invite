@@ -9,7 +9,7 @@
 
 - [ ] **HERO-01**: Hero section with couple names in Hindi + English and wedding date
 - [ ] **HERO-02**: Live countdown timer showing days/hours/minutes to wedding day
-- [ ] **HERO-03**: WhatsApp-optimized OG meta tags for beautiful link previews
+- [x] **HERO-03**: WhatsApp-optimized OG meta tags for beautiful link previews
 
 ### Event Details
 
@@ -20,14 +20,14 @@
 ### Content & Media
 
 - [ ] **CONT-01**: Photo gallery with grid/carousel layout, lightbox view, and lazy loading
-- [ ] **CONT-02**: Bilingual content — Hindi for headers/blessings, English for logistics
+- [x] **CONT-02**: Bilingual content — Hindi for headers/blessings, English for logistics
 - [ ] **CONT-03**: "Our Story" relationship timeline with milestones and photos
 - [ ] **CONT-04**: Embedded pre-wedding video (YouTube/Vimeo, lazy-loaded)
 
 ### Animations & Design
 
 - [ ] **ANIM-01**: Scroll-triggered animations (fade-in, parallax, slide effects)
-- [ ] **ANIM-02**: Bold, vibrant visual design — rich colors, large typography, dramatic layouts
+- [x] **ANIM-02**: Bold, vibrant visual design — rich colors, large typography, dramatic layouts
 
 ### RSVP
 
@@ -38,8 +38,8 @@
 
 ### Performance
 
-- [ ] **PERF-01**: Mobile-first responsive design (works on low-end Android)
-- [ ] **PERF-02**: Fast load time under 3 seconds on 4G (WebP images, lazy loading, minimal JS)
+- [x] **PERF-01**: Mobile-first responsive design (works on low-end Android)
+- [x] **PERF-02**: Fast load time under 3 seconds on 4G (WebP images, lazy loading, minimal JS)
 
 ## v2 Requirements
 
@@ -68,22 +68,22 @@
 |-------------|-------|--------|
 | HERO-01 | Phase 2 | Pending |
 | HERO-02 | Phase 2 | Pending |
-| HERO-03 | Phase 1 | Pending |
+| HERO-03 | Phase 1 | Complete |
 | EVNT-01 | Phase 2 | Pending |
 | EVNT-02 | Phase 2 | Pending |
 | EVNT-03 | Phase 2 | Pending |
 | CONT-01 | Phase 2 | Pending |
-| CONT-02 | Phase 1 | Pending |
+| CONT-02 | Phase 1 | Complete |
 | CONT-03 | Phase 2 | Pending |
 | CONT-04 | Phase 2 | Pending |
 | ANIM-01 | Phase 2 | Pending |
-| ANIM-02 | Phase 1 | Pending |
+| ANIM-02 | Phase 1 | Complete |
 | RSVP-01 | Phase 3 | Pending |
 | RSVP-02 | Phase 3 | Pending |
 | RSVP-03 | Phase 3 | Pending |
 | RSVP-04 | Phase 3 | Pending |
-| PERF-01 | Phase 1 | Pending |
-| PERF-02 | Phase 1 | Pending |
+| PERF-01 | Phase 1 | Complete |
+| PERF-02 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 18 total
