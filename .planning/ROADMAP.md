@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation + Design System** - Project scaffold, Tailwind theme, font strategy, animation wrappers, responsive foundation, and performance budgets (completed 2026-03-11)
 - [x] **Phase 2: Presentation Sections** - Hero, countdown, all 5 event details, Our Story timeline, photo gallery, video embed, and scroll animations (completed 2026-03-12)
-- [ ] **Phase 3: RSVP System** - Day-wise RSVP form, Firebase backend, confirmation screen, and registry/gifts section
+- [x] **Phase 3: RSVP System** - Day-wise RSVP form, Firebase backend, confirmation screen, and registry/gifts section (completed 2026-03-12)
 - [ ] **Phase 4: Polish + Launch Verification** - Performance audit, real device testing, WhatsApp OG verification, and RSVP testing with non-tech-savvy users
 
 ## Phase Details
@@ -62,12 +62,12 @@ Plans:
   2. RSVP data appears in Firebase Firestore after submission, with security rules preventing client-side reads of other guests' data
   3. After submitting, guest sees a full-screen confirmation with a summary of which events they are attending
   4. Registry/gifts section is visible with links or a blessing note
-**Plans:** 2/3 plans executed
+**Plans:** 3/3 plans complete
 
 Plans:
-- [ ] 03-00-PLAN.md — Install deps, create data constants (RSVP_DAYS, GIFT_ITEMS), Firebase config, RSVP submit logic, and Wave 0 test stubs
-- [ ] 03-01-PLAN.md — RSVP form section with day cards, validation, submit flow, and confirmation screen with confetti
-- [ ] 03-02-PLAN.md — Gift wishlist section, page wiring, and visual verification checkpoint
+- [x] 03-00-PLAN.md — Install deps, create data constants (RSVP_DAYS, GIFT_ITEMS), Firebase config, RSVP submit logic, and Wave 0 test stubs
+- [x] 03-01-PLAN.md — RSVP form section with day cards, validation, submit flow, and confirmation screen with confetti
+- [x] 03-02-PLAN.md — Gift wishlist section, page wiring, and visual verification checkpoint
 
 ### Phase 4: Polish + Launch Verification
 **Goal**: The site is verified to work flawlessly on real devices, real networks, and with real users before sharing the WhatsApp link with 300+ guests
@@ -93,5 +93,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 |-------|----------------|--------|-----------|
 | 1. Foundation + Design System | 2/2 | Complete   | 2026-03-11 |
 | 2. Presentation Sections | 4/4 | Complete   | 2026-03-12 |
-| 3. RSVP System | 2/3 | In Progress|  |
+| 3. RSVP System | 3/3 | Complete   | 2026-03-12 |
 | 4. Polish + Launch Verification | 0/1 | Not started | - |
