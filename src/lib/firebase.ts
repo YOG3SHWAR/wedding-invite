@@ -1,3 +1,4 @@
+// DEPRECATED: Use firebase-lazy.ts instead. This file exists only for backward compatibility.
 import { initializeApp, getApps } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
 
