@@ -57,6 +57,26 @@ vi.mock('motion/react', () => {
   }
 })
 
+// Mock firebase/app
+vi.mock('firebase/app', () => ({
+  initializeApp: vi.fn(() => ({})),
+  getApps: vi.fn(() => []),
+}))
+
+// Mock firebase/firestore
+vi.mock('firebase/firestore', () => ({
+  getFirestore: vi.fn(() => ({})),
+  doc: vi.fn((_db: unknown, collection: string, id: string) => ({
+    collection,
+    id,
+  })),
+  setDoc: vi.fn(() => Promise.resolve()),
+  serverTimestamp: vi.fn(() => ({ _type: 'serverTimestamp' })),
+}))
+
+// Mock canvas-confetti
+vi.mock('canvas-confetti', () => ({ default: vi.fn() }))
+
 // Mock next/image - replace with plain <img> element
 vi.mock('next/image', () => ({
   default: (props: Record<string, unknown>) => {
