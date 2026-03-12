@@ -33,9 +33,9 @@ export function HeroSection() {
           <div className="absolute bottom-0 left-0 w-12 h-12 md:w-16 md:h-16 border-b-2 border-l-2 border-gold/60 rounded-bl-sm" aria-hidden="true" />
           <div className="absolute bottom-0 right-0 w-12 h-12 md:w-16 md:h-16 border-b-2 border-r-2 border-gold/60 rounded-br-sm" aria-hidden="true" />
 
-          {/* Hindi blessing */}
+          {/* Hindi blessing (decorative accent) */}
           <p
-            className="font-hindi text-2xl md:text-3xl text-gold-light tracking-wide"
+            className="font-hindi text-xl md:text-2xl text-gold-light tracking-wide"
             style={{ textShadow: '0 2px 8px rgba(0,0,0,0.4)' }}
           >
             शुभ विवाह
@@ -44,20 +44,20 @@ export function HeroSection() {
           {/* Decorative gold line */}
           <div className="mx-auto my-4 w-24 md:w-32 h-px bg-gradient-to-r from-transparent via-gold to-transparent" aria-hidden="true" />
 
-          {/* Couple names in Hindi */}
+          {/* Couple names in English (primary) */}
           <h1
-            className="font-hindi text-6xl md:text-8xl lg:text-9xl text-gold leading-tight"
+            className="font-heading text-6xl md:text-8xl lg:text-9xl text-gold leading-tight"
             style={{ textShadow: '0 4px 16px rgba(0,0,0,0.5)' }}
           >
-            {COUPLE.nameHindi}
+            {COUPLE.nameEnglish}
           </h1>
 
-          {/* Couple names in English */}
+          {/* Couple names in Hindi (secondary accent) */}
           <h2
-            className="mt-4 font-heading text-3xl md:text-5xl text-white tracking-wide"
+            className="mt-4 font-hindi text-3xl md:text-5xl text-white/80 tracking-wide"
             style={{ textShadow: '0 2px 12px rgba(0,0,0,0.5)' }}
           >
-            {COUPLE.nameEnglish}
+            {COUPLE.nameHindi}
           </h2>
 
           {/* Wedding date */}

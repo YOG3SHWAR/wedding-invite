@@ -70,26 +70,26 @@ export function GiftsSection() {
             <GiftIcon className="mx-auto text-gold/40 mb-4" />
 
             <h1
-              className="font-hindi text-4xl md:text-6xl leading-tight mb-2"
+              className="font-heading text-4xl md:text-6xl leading-tight mb-2 tracking-wide"
               style={{
                 background: 'linear-gradient(135deg, #D4AF37 0%, #B8941F 40%, #E8CC6E 60%, #D4AF37 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
               }}
             >
-              उपहार
-            </h1>
-            <h2 className="font-heading text-xl md:text-2xl text-maroon tracking-wide mb-4">
               Gift Wishes
+            </h1>
+            <h2 className="font-hindi text-xl md:text-2xl text-maroon/60 tracking-wide mb-4">
+              उपहार
             </h2>
 
             {/* Blessing */}
             <div className="max-w-md mx-auto">
-              <p className="font-hindi text-lg md:text-xl text-gold/80 mb-1">
-                आपका साथ ही हमारा सबसे बड़ा उपहार है
-              </p>
-              <p className="font-body text-maroon/50 italic">
+              <p className="font-body text-lg md:text-xl text-gold-accessible/80 italic mb-1">
                 Your presence is our greatest gift
+              </p>
+              <p className="font-hindi text-maroon/50">
+                आपका साथ ही हमारा सबसे बड़ा उपहार है
               </p>
               <p className="font-body text-maroon/40 text-sm mt-3">
                 If you&apos;d like to bless us further, here are some ideas:
@@ -148,7 +148,7 @@ export function GiftsSection() {
                   </p>
 
                   <div className="flex items-center justify-between mt-4">
-                    <span className="font-body text-gold font-semibold text-sm">
+                    <span className="font-body text-gold-accessible font-semibold text-sm">
                       {gift.priceRange}
                     </span>
                     <a

@@ -125,7 +125,7 @@ export function RsvpSection() {
       setStatus('success')
     } catch {
       setStatus('error')
-      setErrorMessage('कुछ गलत हो गया / Something went wrong')
+      setErrorMessage('Something went wrong / कुछ गलत हो गया')
     }
   }
 
@@ -174,7 +174,7 @@ export function RsvpSection() {
             </p>
 
             <h2
-              className="font-hindi text-5xl md:text-7xl leading-tight"
+              className="font-heading text-5xl md:text-7xl leading-tight tracking-wide"
               style={{
                 background: 'linear-gradient(135deg, #D4AF37 0%, #B8941F 40%, #E8CC6E 60%, #D4AF37 100%)',
                 WebkitBackgroundClip: 'text',
@@ -182,17 +182,27 @@ export function RsvpSection() {
                 filter: 'drop-shadow(0 2px 4px rgba(212,175,55,0.3))',
               }}
             >
-              आमंत्रण
+              RSVP
             </h2>
 
-            <p className="font-heading text-xl md:text-2xl text-maroon mt-2 tracking-wide">
-              RSVP
+            <p
+              className="font-hindi text-xl md:text-2xl text-maroon/60 mt-2"
+              style={{
+                background: 'linear-gradient(135deg, #D4AF37 0%, #B8941F 40%, #E8CC6E 60%, #D4AF37 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              आमंत्रण
             </p>
 
             {/* Bottom decorative line */}
             <div className="mx-auto mt-6 w-24 md:w-36 h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
 
-            <p className="font-hindi text-base md:text-lg text-maroon/60 mt-4">
+            <p className="font-body text-sm md:text-base text-maroon/60 mt-4">
+              Please confirm your attendance
+            </p>
+            <p className="font-hindi text-sm text-maroon/45 mt-1">
               कृपया अपनी उपस्थिति दर्ज करें
             </p>
           </div>
@@ -214,8 +224,8 @@ export function RsvpSection() {
                     : 'border-gold/30 hover:border-gold/60 hover:bg-gold/5'
                 }`}
               >
-                <span className="font-hindi text-xl text-gold">सभी दिन</span>
-                <span className="font-heading text-gold/80 ml-2">/ All Days</span>
+                <span className="font-heading text-xl text-gold-accessible">All Days</span>
+                <span className="font-hindi text-gold-accessible/70 ml-2">/ सभी दिन</span>
                 <AnimatePresence>
                   {allSelected && (
                     <motion.span
@@ -356,18 +366,18 @@ export function RsvpSection() {
                           </span>
                         </div>
 
-                        {/* Event names — the hero element */}
+                        {/* Event names — English primary, Hindi accent */}
                         <h3
-                          className="font-hindi text-3xl md:text-4xl leading-tight mb-1 pr-10"
+                          className="font-heading text-3xl md:text-4xl leading-tight mb-1 pr-10 tracking-wide"
                           style={{ color: accentColor }}
                         >
-                          {eventHindiNames}
+                          {eventNames}
                         </h3>
                         <p
-                          className="font-heading text-xl md:text-2xl tracking-wide pr-10"
-                          style={{ color: accentColor, opacity: 0.85 }}
+                          className="font-hindi text-xl md:text-2xl pr-10"
+                          style={{ color: accentColor, opacity: 0.7 }}
                         >
-                          {eventNames}
+                          {eventHindiNames}
                         </p>
 
                         {/* Decorative divider inside card */}
@@ -391,8 +401,8 @@ export function RsvpSection() {
               {/* Name field */}
               <div className="relative">
                 <label className="block mb-2">
-                  <span className="font-hindi text-sm text-gold">आपका नाम</span>
-                  <span className="font-body text-xs text-maroon/40 ml-2">/ Your Name</span>
+                  <span className="font-body text-sm text-gold-accessible">Your Name</span>
+                  <span className="font-hindi text-xs text-maroon/40 ml-2">/ आपका नाम</span>
                 </label>
                 <input
                   type="text"
@@ -408,8 +418,8 @@ export function RsvpSection() {
               {/* Phone field */}
               <div className="relative">
                 <label className="block mb-2">
-                  <span className="font-hindi text-sm text-gold">फ़ोन नंबर</span>
-                  <span className="font-body text-xs text-maroon/40 ml-2">/ Phone Number</span>
+                  <span className="font-body text-sm text-gold-accessible">Phone Number</span>
+                  <span className="font-hindi text-xs text-maroon/40 ml-2">/ फ़ोन नंबर</span>
                 </label>
                 <input
                   type="tel"
@@ -425,8 +435,8 @@ export function RsvpSection() {
               {/* Guest Count */}
               <div>
                 <label className="block mb-2">
-                  <span className="font-hindi text-sm text-gold">मेहमानों की संख्या</span>
-                  <span className="font-body text-xs text-maroon/40 ml-2">/ Number of Guests</span>
+                  <span className="font-body text-sm text-gold-accessible">Number of Guests</span>
+                  <span className="font-hindi text-xs text-maroon/40 ml-2">/ मेहमानों की संख्या</span>
                 </label>
                 <div className="flex items-center border border-gold/20 rounded-lg overflow-hidden bg-white/80 w-fit">
                   <button
@@ -501,9 +511,9 @@ export function RsvpSection() {
                   </span>
                 ) : (
                   <>
-                    <span className="font-hindi">RSVP भेजें</span>
-                    <span className="mx-3 text-gold/60">•</span>
                     <span>Send RSVP</span>
+                    <span className="mx-3 text-gold/60">•</span>
+                    <span className="font-hindi">RSVP भेजें</span>
                   </>
                 )}
               </span>
@@ -531,7 +541,7 @@ export function RsvpSection() {
                     }}
                     className="mt-3 px-6 py-2 rounded-lg border-2 border-maroon text-maroon font-heading hover:bg-maroon/5 transition-colors"
                   >
-                    <span className="font-hindi">पुनः प्रयास करें</span> / Try Again
+                    Try Again / <span className="font-hindi">पुनः प्रयास करें</span>
                   </button>
                 )}
               </motion.div>
@@ -543,15 +553,15 @@ export function RsvpSection() {
         <ScrollReveal delay={0.6}>
           <div className="mt-16 text-center">
             <div className="mx-auto mb-4 w-20 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-            <p className="font-hindi text-base text-maroon/50 mb-1">
-              आपका साथ ही हमारा सबसे बड़ा उपहार है
-            </p>
-            <p className="font-body text-sm text-maroon/40 mb-4">
+            <p className="font-body text-base text-maroon/50 mb-1">
               Your presence is our greatest gift
+            </p>
+            <p className="font-hindi text-sm text-maroon/40 mb-4">
+              आपका साथ ही हमारा सबसे बड़ा उपहार है
             </p>
             <Link
               href="/gifts"
-              className="inline-flex items-center gap-2 px-8 py-3 rounded-lg border border-gold/30 text-gold font-heading tracking-wide hover:bg-gold/5 hover:border-gold/50 transition-all duration-300 group"
+              className="inline-flex items-center gap-2 px-8 py-3 rounded-lg border border-gold/30 text-gold-accessible font-heading tracking-wide hover:bg-gold/5 hover:border-gold/50 transition-all duration-300 group"
             >
               <span>View Gift Wishes</span>
               <svg

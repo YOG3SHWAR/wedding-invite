@@ -31,12 +31,12 @@ export function EventCard({ event, position }: EventCardProps) {
         className="bg-cream-dark rounded-lg shadow-md border-l-4 p-5 md:p-6"
         style={{ borderLeftColor: accentColor }}
       >
-        {/* Event name: Hindi + English */}
-        <h3 className="font-hindi text-2xl text-gold leading-tight">
-          {event.nameHindi}
-        </h3>
-        <p className="font-heading text-xl text-maroon-dark mt-0.5">
+        {/* Event name: English (primary) + Hindi (accent) */}
+        <h3 className="font-heading text-2xl text-gold-accessible leading-tight">
           {event.name}
+        </h3>
+        <p className="font-hindi text-xl text-maroon-dark/60 mt-0.5">
+          {event.nameHindi}
         </p>
 
         {/* Date and time */}
@@ -84,7 +84,7 @@ export function EventCard({ event, position }: EventCardProps) {
             href={event.mapUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-body text-sm text-gold underline underline-offset-2 hover:text-gold-dark transition-colors"
+            className="font-body text-sm text-gold-accessible underline underline-offset-2 hover:text-gold-dark transition-colors"
           >
             {event.venue}
           </a>
