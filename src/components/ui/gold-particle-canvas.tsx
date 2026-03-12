@@ -7,8 +7,7 @@ import { useEffect, useRef, useCallback } from 'react'
  *
  * Full-viewport HTML5 Canvas that renders a bold, always-on gold sparkle
  * particle system. Particles trail the cursor (desktop) or follow touch/tap
- * (mobile), and ambient edge particles keep the background alive even without
- * interaction.
+ * (mobile). Effects only appear on interaction.
  *
  * Renders behind all content via `position: fixed; z-index: 0; pointer-events: none`.
  * Respects `prefers-reduced-motion` -- animation loop never starts when set.
@@ -91,34 +90,6 @@ function createBurstParticle(x: number, y: number): Particle {
   }
 }
 
-function createAmbientParticle(w: number, h: number): Particle {
-  // Spawn along a random edge
-  const edge = Math.floor(Math.random() * 4) // 0=top, 1=right, 2=bottom, 3=left
-  let x: number, y: number, vx: number, vy: number
-  switch (edge) {
-    case 0: // top
-      x = rand(0, w); y = 0; vx = rand(-0.3, 0.3); vy = rand(0.2, 0.6); break
-    case 1: // right
-      x = w; y = rand(0, h); vx = rand(-0.6, -0.2); vy = rand(-0.3, 0.3); break
-    case 2: // bottom
-      x = rand(0, w); y = h; vx = rand(-0.3, 0.3); vy = rand(-0.6, -0.2); break
-    default: // left
-      x = 0; y = rand(0, h); vx = rand(0.2, 0.6); vy = rand(-0.3, 0.3); break
-  }
-  const maxLife = Math.floor(rand(60, 120))
-  const initialOpacity = rand(0.3, 0.5)
-  return {
-    x, y, vx, vy,
-    size: rand(1.5, 4),
-    opacity: initialOpacity,
-    initialOpacity,
-    life: 0,
-    maxLife,
-    color: pickRandom(GOLD_COLORS),
-    shape: pickRandom(SHAPES),
-  }
-}
-
 // --- Drawing helpers ------------------------------------------------------------
 
 function drawCircle(ctx: CanvasRenderingContext2D, p: Particle) {
@@ -179,7 +150,6 @@ export function GoldParticleCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const particlesRef = useRef<Particle[]>([])
   const rafRef = useRef<number>(0)
-  const frameCountRef = useRef(0)
   const isMobileRef = useRef(false)
   const reducedMotionRef = useRef(false)
 
@@ -211,7 +181,6 @@ export function GoldParticleCanvas() {
 
     isMobileRef.current = isMobileDevice()
     const particleCap = isMobileRef.current ? MOBILE_CAP : DESKTOP_CAP
-    const ambientInterval = isMobileRef.current ? 8 : 4 // frames between ambient spawns
 
     sizeCanvas()
 
@@ -273,7 +242,6 @@ export function GoldParticleCanvas() {
       if (!running) return
 
       const particles = particlesRef.current
-      frameCountRef.current++
 
       // Spawn trail particles from pointer
       if (pointerRef.current.active) {
@@ -283,11 +251,6 @@ export function GoldParticleCanvas() {
             createTrailParticle(pointerRef.current.x, pointerRef.current.y)
           )
         }
-      }
-
-      // Ambient edge particles
-      if (frameCountRef.current % ambientInterval === 0 && particles.length < particleCap) {
-        particles.push(createAmbientParticle(w(), h()))
       }
 
       // Clear

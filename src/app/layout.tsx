@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { yatraOne, playfairDisplay, cormorantGaramond } from '@/lib/fonts'
 import { AnimationProvider } from '@/components/providers/animation-provider'
 import { GoldParticleCanvas } from '@/components/ui/gold-particle-canvas'
-import { ParallaxBackground } from '@/components/ui/parallax-background'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -36,7 +35,6 @@ export default function RootLayout({
     >
       <body className="bg-cream text-maroon-dark font-body antialiased">
         <GoldParticleCanvas />
-        <ParallaxBackground />
         <AnimationProvider>{children}</AnimationProvider>
       </body>
     </html>
