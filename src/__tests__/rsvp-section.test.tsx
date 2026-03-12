@@ -29,18 +29,18 @@ describe('RsvpSection', () => {
     expect(screen.getByText('Day 3', { exact: false })).toBeInTheDocument()
   })
 
-  it('renders day cards with Hindi labels', () => {
+  it('renders day cards with event names in Hindi', () => {
     render(<RsvpSection />)
-    expect(screen.getByText('पहला दिन')).toBeInTheDocument()
-    expect(screen.getByText('दूसरा दिन')).toBeInTheDocument()
-    expect(screen.getByText('तीसरा दिन')).toBeInTheDocument()
+    expect(screen.getByText('तिलक')).toBeInTheDocument()
+    expect(screen.getByText('मेहंदी & संगीत')).toBeInTheDocument()
+    expect(screen.getByText('हल्दी & शादी')).toBeInTheDocument()
   })
 
   it('renders name, phone, and guest count inputs', () => {
     render(<RsvpSection />)
-    expect(screen.getByPlaceholderText('आपका नाम / Your Name')).toBeInTheDocument()
+    expect(screen.getByPlaceholderText('Enter your name')).toBeInTheDocument()
     expect(
-      screen.getByPlaceholderText('फ़ोन नंबर / Phone Number')
+      screen.getByPlaceholderText('10-digit mobile number')
     ).toBeInTheDocument()
     expect(screen.getByLabelText('Guest count')).toBeInTheDocument()
   })
