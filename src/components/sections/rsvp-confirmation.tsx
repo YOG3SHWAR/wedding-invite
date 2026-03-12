@@ -159,7 +159,7 @@ export function RsvpConfirmation({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, type: 'spring', stiffness: 80 }}
-          className="font-hindi text-6xl md:text-8xl leading-tight"
+          className="font-heading text-6xl md:text-8xl leading-tight"
           style={{
             background: 'linear-gradient(135deg, #D4AF37 0%, #E8CC6E 40%, #B8941F 60%, #D4AF37 100%)',
             WebkitBackgroundClip: 'text',
@@ -167,16 +167,16 @@ export function RsvpConfirmation({
             filter: 'drop-shadow(0 4px 8px rgba(212,175,55,0.3))',
           }}
         >
-          धन्यवाद!
+          Thank You, {guestName}!
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="font-heading text-2xl md:text-3xl text-maroon mt-3"
+          className="font-hindi text-2xl md:text-3xl text-maroon/60 mt-3"
         >
-          Thank You, {guestName}!
+          धन्यवाद!
         </motion.p>
 
         <motion.p
@@ -185,9 +185,9 @@ export function RsvpConfirmation({
           transition={{ delay: 0.6 }}
           className="font-body text-maroon/60 mt-2"
         >
-          <span className="font-hindi">आपकी उपस्थिति दर्ज हो गई</span>
-          <span className="mx-2 text-gold/40">•</span>
           Your RSVP has been recorded
+          <span className="mx-2 text-gold/40">•</span>
+          <span className="font-hindi">आपकी उपस्थिति दर्ज हो गई</span>
         </motion.p>
 
         {/* Gold divider */}

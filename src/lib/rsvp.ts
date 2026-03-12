@@ -40,7 +40,7 @@ export function validatePhone(raw: string): {
       valid: false,
       normalized,
       error:
-        'कृपया 10 अंकों का फ़ोन नंबर दर्ज करें / Please enter a 10-digit phone number',
+        'Please enter a 10-digit phone number / कृपया 10 अंकों का फ़ोन नंबर दर्ज करें',
     }
   }
 
