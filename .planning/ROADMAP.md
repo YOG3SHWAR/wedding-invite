@@ -13,7 +13,7 @@ This roadmap delivers a visually stunning Indian wedding website in 4 phases: fi
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation + Design System** - Project scaffold, Tailwind theme, font strategy, animation wrappers, responsive foundation, and performance budgets (completed 2026-03-11)
-- [ ] **Phase 2: Presentation Sections** - Hero, countdown, all 5 event details, Our Story timeline, photo gallery, video embed, and scroll animations
+- [x] **Phase 2: Presentation Sections** - Hero, countdown, all 5 event details, Our Story timeline, photo gallery, video embed, and scroll animations (completed 2026-03-12)
 - [ ] **Phase 3: RSVP System** - Day-wise RSVP form, Firebase backend, confirmation screen, and registry/gifts section
 - [ ] **Phase 4: Polish + Launch Verification** - Performance audit, real device testing, WhatsApp OG verification, and RSVP testing with non-tech-savvy users
 
@@ -45,13 +45,13 @@ Plans:
   3. Photo gallery displays images in a grid/carousel with lightbox view and all images lazy-load
   4. Our Story timeline shows relationship milestones with photos and scroll-triggered animations
   5. Pre-wedding video section shows a thumbnail that loads the video player only on click (no eager iframe)
-**Plans:** 1/4 plans executed
+**Plans:** 4/4 plans complete
 
 Plans:
-- [ ] 02-00-PLAN.md — Wave 0 test stubs and shared test setup
-- [ ] 02-01-PLAN.md — Data layer, shared utilities, hero section with countdown, and Our Story timeline
-- [ ] 02-02-PLAN.md — Event timeline with color-coded cards, photo gallery with lightbox, and video section
-- [ ] 02-03-PLAN.md — Build verification and visual checkpoint for all presentation sections
+- [x] 02-00-PLAN.md — Wave 0 test stubs and shared test setup
+- [x] 02-01-PLAN.md — Data layer, shared utilities, hero section with countdown, and Our Story timeline
+- [x] 02-02-PLAN.md — Event timeline with color-coded cards, photo gallery with lightbox, and video section
+- [x] 02-03-PLAN.md — Build verification and visual checkpoint for all presentation sections
 
 ### Phase 3: RSVP System
 **Goal**: Guests can RSVP by selecting which days they will attend, with their response stored in Firebase and confirmed on screen -- the form is dead-simple for non-tech-savvy family members on mobile
@@ -91,6 +91,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation + Design System | 2/2 | Complete   | 2026-03-11 |
-| 2. Presentation Sections | 1/4 | In Progress|  |
+| 2. Presentation Sections | 4/4 | Complete   | 2026-03-12 |
 | 3. RSVP System | 0/2 | Not started | - |
 | 4. Polish + Launch Verification | 0/1 | Not started | - |
