@@ -4,6 +4,8 @@ import { OurStorySection } from '@/components/sections/our-story-section'
 import { EventTimeline } from '@/components/sections/event-timeline'
 import { PhotoGallery } from '@/components/sections/photo-gallery'
 import { VideoSection } from '@/components/sections/video-section'
+import { RsvpSection } from '@/components/sections/rsvp-section'
+import { GiftsSection } from '@/components/sections/gifts-section'
 
 export default function Home() {
   return (
@@ -28,12 +30,11 @@ export default function Home() {
 
       <SectionDivider />
 
-      {/* RSVP placeholder (Phase 3) */}
-      <section className="py-section-mobile md:py-section px-4">
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="font-heading text-2xl text-maroon">RSVP Coming Soon</p>
-        </div>
-      </section>
+      <RsvpSection />
+
+      <SectionDivider />
+
+      <GiftsSection />
     </main>
   )
 }
