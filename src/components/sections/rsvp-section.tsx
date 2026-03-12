@@ -1,9 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { RSVP_DAYS, EVENTS, EVENT_COLORS } from '@/lib/constants'
-import { validatePhone, submitRsvp } from '@/lib/rsvp'
+import { validatePhone } from '@/lib/rsvp'
+import { preloadFirebase } from '@/lib/firebase-lazy'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
 import { RsvpConfirmation } from '@/components/sections/rsvp-confirmation'
 import Link from 'next/link'
@@ -74,6 +75,23 @@ export function RsvpSection() {
   const [selectedDays, setSelectedDays] = useState<Set<number>>(new Set())
   const [status, setStatus] = useState<FormStatus>('idle')
   const [errorMessage, setErrorMessage] = useState('')
+  const sectionRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const el = sectionRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          preloadFirebase()
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '200px' }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
 
   const allSelected = selectedDays.size === RSVP_DAYS.length
 
@@ -116,6 +134,7 @@ export function RsvpSection() {
     setStatus('submitting')
 
     try {
+      const { submitRsvp } = await import('@/lib/rsvp')
       await submitRsvp({
         name: name.trim(),
         phone,
@@ -140,6 +159,7 @@ export function RsvpSection() {
 
   return (
     <section
+      ref={sectionRef}
       id="rsvp"
       className="py-section-mobile md:py-section px-4 relative overflow-hidden"
     >

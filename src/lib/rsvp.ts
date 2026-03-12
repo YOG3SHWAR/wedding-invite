@@ -1,5 +1,4 @@
-import { doc, setDoc, serverTimestamp } from 'firebase/firestore'
-import { db } from './firebase'
+import { getDb } from './firebase-lazy'
 
 export type RsvpData = {
   name: string
@@ -59,6 +58,9 @@ export async function submitRsvp(data: RsvpData): Promise<string> {
   }
 
   const phoneId = normalized
+
+  const { doc, setDoc, serverTimestamp } = await import('firebase/firestore')
+  const db = await getDb()
 
   await setDoc(
     doc(db, 'rsvps', phoneId),
