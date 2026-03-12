@@ -13,6 +13,7 @@
   --color-gold: #D4AF37;
   --color-gold-light: #E8CC6E;
   --color-gold-dark: #B8941F;
+  --color-gold-accessible: #8B6914; /* 4.83:1 on cream -- WCAG AA pass for normal text */
   --color-emerald: #046307;
   --color-emerald-light: #0A8A0F;
   --color-cream: #FFF8F0;

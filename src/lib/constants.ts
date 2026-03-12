@@ -1,3 +1,17 @@
+/**
+ * --- CONTENT CHECKLIST ---
+ * Update these items before sharing the invitation link:
+ *
+ * [ ] EVENTS[*].time -- Real times for all 5 events
+ * [ ] EVENTS[*].venue -- Real venue names
+ * [ ] EVENTS[*].mapUrl -- Real Google Maps links
+ * [ ] STORY_MILESTONES[*].description -- Real relationship milestones
+ * [ ] GIFT_ITEMS[*].buyUrl -- Real purchase links (or remove section)
+ * [ ] public/images/og-couple.jpg -- Real couple photo for WhatsApp preview
+ * [ ] Gallery photos -- Replace placeholder SVGs with real photos
+ * [ ] Video -- Replace placeholder with real pre-wedding video URL
+ */
+
 export const EVENT_COLORS = {
   tilak: '#C41E3A',
   mehndi: '#228B22',
