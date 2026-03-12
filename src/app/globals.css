@@ -23,13 +23,19 @@
   /* Per-event accent colors */
   --color-tilak: #9A031E;
   --color-mehndi: #0F4C5C;
-  --color-sangeet: #5F0F40;
+  --color-sangeet: #9B2D8B;
   --color-haldi: #FB8B24;
   --color-shadi: #9A031E;
 
   /* Section spacing */
   --spacing-section: 6rem;
   --spacing-section-mobile: 3rem;
+}
+
+/* Interactive card shimmer sweep animation */
+@keyframes interactive-card-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 /* Base styles */

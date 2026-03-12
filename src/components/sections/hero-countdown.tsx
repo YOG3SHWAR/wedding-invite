@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { InteractiveCard } from '@/components/ui/interactive-card'
 
 interface TimeRemaining {
   days: number
@@ -47,9 +48,11 @@ export function HeroCountdown({ targetDate }: HeroCountdownProps) {
   return (
     <div className="mt-8 flex gap-3 md:gap-4 justify-center" suppressHydrationWarning>
       {values.map((value, i) => (
-        <div
+        <InteractiveCard
           key={LABELS[i]}
           className="border border-gold/60 rounded-md p-3 md:p-4 min-w-[70px] md:min-w-[80px] bg-white/10 backdrop-blur-sm"
+          tiltIntensity={10}
+          liftAmount={5}
         >
           <span
             className="font-heading text-3xl md:text-4xl text-gold block leading-none"
@@ -60,7 +63,7 @@ export function HeroCountdown({ targetDate }: HeroCountdownProps) {
           <span className="font-body text-xs md:text-sm text-cream uppercase tracking-wider mt-1 block">
             {LABELS[i]}
           </span>
-        </div>
+        </InteractiveCard>
       ))}
     </div>
   )

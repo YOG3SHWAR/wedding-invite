@@ -15,7 +15,7 @@
 export const EVENT_COLORS = {
   tilak: '#9A031E',
   mehndi: '#0F4C5C',
-  sangeet: '#5F0F40',
+  sangeet: '#9B2D8B',
   haldi: '#FB8B24',
   shadi: '#9A031E',
 } as const

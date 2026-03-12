@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react'
 import { COUPLE, WEDDING_TARGET_DATE } from '@/lib/constants'
+import { InteractiveCard } from '@/components/ui/interactive-card'
 import { HeroCountdown } from './hero-countdown'
 
 /**
@@ -42,12 +43,15 @@ export function HeroSection() {
 
       {/* Content with gold ornamental frame */}
       <div className="relative z-10 px-4 py-20">
-        <div
+        <InteractiveCard
           className="relative border border-gold/25 px-10 py-14 md:px-20 md:py-20"
           style={{
             boxShadow:
               'inset 0 0 0 3px transparent, inset 0 0 0 4px rgba(251,139,36,0.12)',
           }}
+          tiltIntensity={6}
+          liftAmount={4}
+          glowColor="rgba(251,139,36,0.1)"
         >
           {/* Corner accents — four gold right-angle lines */}
           <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-gold/50" />
@@ -116,7 +120,7 @@ export function HeroSection() {
               <HeroCountdown targetDate={WEDDING_TARGET_DATE} />
             </motion.div>
           </div>
-        </div>
+        </InteractiveCard>
 
         {/* Scroll indicator — animated gold chevron */}
         <motion.div

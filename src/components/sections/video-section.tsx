@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { PLACEHOLDER_VIDEO } from '@/lib/placeholder-data'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
+import { InteractiveCard } from '@/components/ui/interactive-card'
 
 export function VideoSection() {
   const [playing, setPlaying] = useState(false)
@@ -20,7 +21,7 @@ export function VideoSection() {
 
         {/* Video container with gold frame */}
         <ScrollReveal variant="fadeUp">
-          <div className="border border-gold/25 rounded-xl p-1">
+          <InteractiveCard className="border border-gold/25 rounded-xl p-1" tiltIntensity={6} liftAmount={5}>
             <div className="aspect-video max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg">
               {!playing ? (
                 <button
@@ -66,7 +67,7 @@ export function VideoSection() {
                 />
               )}
             </div>
-          </div>
+          </InteractiveCard>
         </ScrollReveal>
       </div>
     </section>

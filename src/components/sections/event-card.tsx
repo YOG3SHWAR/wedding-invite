@@ -1,4 +1,5 @@
 import { EVENT_COLORS, EVENT_COLORS_LIGHT } from '@/lib/constants'
+import { InteractiveCard } from '@/components/ui/interactive-card'
 
 type EventColorKey = keyof typeof EVENT_COLORS
 
@@ -31,7 +32,7 @@ export function EventCard({ event, position, dark }: EventCardProps) {
         ${position === 'left' ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}
       `}
     >
-      <div
+      <InteractiveCard
         className={`rounded-lg border-l-4 p-5 md:p-6 ${
           dark
             ? 'backdrop-blur-sm shadow-lg'
@@ -41,6 +42,7 @@ export function EventCard({ event, position, dark }: EventCardProps) {
           borderLeftColor: accentColor,
           ...(dark ? { backgroundColor: `${accentColor}12` } : {}),
         }}
+        glowColor={`${accentColor}20`}
       >
         {/* Event name: English (primary) + Hindi (accent) — color-coded per event */}
         <h3
@@ -136,7 +138,7 @@ export function EventCard({ event, position, dark }: EventCardProps) {
         <p className={`font-body text-sm mt-3 leading-relaxed ${dark ? 'text-cream/85' : 'text-maroon-dark/90'}`}>
           {event.description}
         </p>
-      </div>
+      </InteractiveCard>
     </div>
   )
 }

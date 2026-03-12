@@ -1,3 +1,5 @@
+import { InteractiveCard } from '@/components/ui/interactive-card'
+
 /**
  * Individual milestone in the Our Story timeline.
  * Renders a circular image placeholder, year badge, title, and description.
@@ -30,7 +32,7 @@ export function StoryMilestone({
       }`}
     >
       {/* Content card */}
-      <div
+      <InteractiveCard
         className={`flex-1 bg-cream border border-gold/35 rounded-lg p-5 md:p-6 shadow-sm ${
           isLeft ? 'md:text-right' : 'md:text-left'
         }`}
@@ -52,7 +54,7 @@ export function StoryMilestone({
         <p className="font-body text-base text-maroon-dark/90 mt-2 leading-relaxed">
           {description}
         </p>
-      </div>
+      </InteractiveCard>
 
       {/* Timeline connector dot (visible on md+) */}
       <div className="hidden md:flex flex-col items-center flex-shrink-0 w-5">

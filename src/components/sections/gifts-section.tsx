@@ -2,6 +2,7 @@
 
 import { GIFT_ITEMS } from '@/lib/constants'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
+import { InteractiveCard } from '@/components/ui/interactive-card'
 import { motion } from 'motion/react'
 import Link from 'next/link'
 
@@ -105,10 +106,10 @@ export function GiftsSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-3xl mx-auto">
           {GIFT_ITEMS.map((gift, index) => (
             <ScrollReveal key={gift.id} delay={0.1 * index}>
-              <motion.div
-                whileHover={{ y: -4, boxShadow: '0 8px 30px rgba(0,0,0,0.08)' }}
-                transition={{ duration: 0.3 }}
+              <InteractiveCard
                 className="rounded-xl border border-gold/15 overflow-hidden bg-white/95 shadow-sm group"
+                tiltIntensity={10}
+                liftAmount={6}
               >
                 {/* Image area with gold accent */}
                 <div className="relative aspect-[4/3] bg-gradient-to-br from-cream to-cream-dark flex items-center justify-center overflow-hidden">
@@ -161,7 +162,7 @@ export function GiftsSection() {
                     </a>
                   </div>
                 </div>
-              </motion.div>
+              </InteractiveCard>
             </ScrollReveal>
           ))}
         </div>

@@ -3,6 +3,7 @@
 import { useCallback } from 'react'
 import { motion } from 'motion/react'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
+import { InteractiveCard } from '@/components/ui/interactive-card'
 
 export function WhatsAppShare() {
   const handleShare = useCallback(() => {
@@ -27,6 +28,12 @@ export function WhatsAppShare() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.15}>
+          <InteractiveCard
+            className="inline-block rounded-xl"
+            tiltIntensity={10}
+            liftAmount={6}
+            glowColor="rgba(37,211,102,0.2)"
+          >
           <motion.button
             onClick={handleShare}
             whileHover={{ scale: 1.03 }}
@@ -51,6 +58,7 @@ export function WhatsAppShare() {
             </svg>
             <span>Share on WhatsApp</span>
           </motion.button>
+          </InteractiveCard>
         </ScrollReveal>
 
         {/* Bottom blessing text */}

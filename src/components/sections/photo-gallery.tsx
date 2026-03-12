@@ -5,6 +5,7 @@ import Lightbox from 'yet-another-react-lightbox'
 import 'yet-another-react-lightbox/styles.css'
 import { PLACEHOLDER_GALLERY } from '@/lib/placeholder-data'
 import { StaggerReveal, StaggerItem } from '@/components/ui/stagger-reveal'
+import { InteractiveCard } from '@/components/ui/interactive-card'
 
 export function PhotoGallery() {
   const [open, setOpen] = useState(false)
@@ -33,25 +34,31 @@ export function PhotoGallery() {
         <StaggerReveal className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
           {PLACEHOLDER_GALLERY.map((img, i) => (
             <StaggerItem key={img.id} className="break-inside-avoid">
-              <button
-                type="button"
-                onClick={() => {
-                  setIndex(i)
-                  setOpen(true)
-                }}
-                className="block w-full rounded-lg overflow-hidden border border-gold/15 hover:border-gold/35 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
-                aria-label={`View ${img.alt}`}
+              <InteractiveCard
+                className="block w-full rounded-lg overflow-hidden border border-gold/15 hover:border-gold/35 shadow-md cursor-pointer"
+                tiltIntensity={8}
+                liftAmount={6}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  width={img.width}
-                  height={img.height}
-                  loading="lazy"
-                  className="w-full h-auto"
-                />
-              </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIndex(i)
+                    setOpen(true)
+                  }}
+                  className="block w-full"
+                  aria-label={`View ${img.alt}`}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    width={img.width}
+                    height={img.height}
+                    loading="lazy"
+                    className="w-full h-auto"
+                  />
+                </button>
+              </InteractiveCard>
             </StaggerItem>
           ))}
         </StaggerReveal>

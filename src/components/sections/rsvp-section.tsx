@@ -6,6 +6,7 @@ import { RSVP_DAYS, EVENTS, EVENT_COLORS } from '@/lib/constants'
 import { validatePhone } from '@/lib/rsvp'
 import { preloadFirebase } from '@/lib/firebase-lazy'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
+import { InteractiveCard } from '@/components/ui/interactive-card'
 import { RsvpConfirmation } from '@/components/sections/rsvp-confirmation'
 import Link from 'next/link'
 
@@ -172,35 +173,41 @@ export function RsvpSection() {
         <form onSubmit={handleSubmit}>
           {/* ─── Select All toggle ─── */}
           <ScrollReveal delay={0.1}>
-            <motion.button
-              type="button"
-              onClick={toggleAll}
-              whileTap={{ scale: 0.97 }}
-              className="w-full mb-8 relative overflow-hidden group"
+            <InteractiveCard
+              className="w-full mb-8 rounded-lg"
+              tiltIntensity={6}
+              liftAmount={5}
             >
-              <div
-                className={`py-4 px-6 rounded-lg border-2 transition-all duration-500 ${
-                  allSelected
-                    ? 'border-gold bg-gold/10 shadow-[0_0_20px_rgba(251,139,36,0.15)]'
-                    : 'border-gold/30 hover:border-gold/60 hover:bg-gold/5'
-                }`}
+              <motion.button
+                type="button"
+                onClick={toggleAll}
+                whileTap={{ scale: 0.97 }}
+                className="w-full relative overflow-hidden group"
               >
-                <span className="font-heading text-xl text-gold-accessible">All Days</span>
-                <span className="font-hindi text-gold-accessible/70 ml-2">/ सभी दिन</span>
-                <AnimatePresence>
-                  {allSelected && (
-                    <motion.span
-                      initial={{ scale: 0, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      exit={{ scale: 0, opacity: 0 }}
-                      className="inline-block ml-3 text-gold"
-                    >
-                      ✓
-                    </motion.span>
-                  )}
-                </AnimatePresence>
-              </div>
-            </motion.button>
+                <div
+                  className={`py-4 px-6 rounded-lg border-2 transition-all duration-500 ${
+                    allSelected
+                      ? 'border-gold bg-gold/10 shadow-[0_0_20px_rgba(251,139,36,0.15)]'
+                      : 'border-gold/30 hover:border-gold/60 hover:bg-gold/5'
+                  }`}
+                >
+                  <span className="font-heading text-xl text-gold-accessible">All Days</span>
+                  <span className="font-hindi text-gold-accessible/70 ml-2">/ सभी दिन</span>
+                  <AnimatePresence>
+                    {allSelected && (
+                      <motion.span
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        exit={{ scale: 0, opacity: 0 }}
+                        className="inline-block ml-3 text-gold"
+                      >
+                        ✓
+                      </motion.span>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </motion.button>
+            </InteractiveCard>
           </ScrollReveal>
 
           {/* ─── Day Cards ─── */}
@@ -214,6 +221,12 @@ export function RsvpSection() {
 
               return (
                 <ScrollReveal key={day.label} delay={0.15 + index * 0.1}>
+                  <InteractiveCard
+                    className="rounded-xl"
+                    glowColor={`${accentColor}20`}
+                    tiltIntensity={8}
+                    liftAmount={6}
+                  >
                   <motion.button
                     type="button"
                     whileTap={{ scale: 0.98 }}
@@ -301,6 +314,7 @@ export function RsvpSection() {
                       </div>
                     </motion.div>
                   </motion.button>
+                  </InteractiveCard>
                 </ScrollReveal>
               )
             })}
@@ -385,35 +399,42 @@ export function RsvpSection() {
 
           {/* ─── Submit Button ─── */}
           <ScrollReveal delay={0.5}>
-            <motion.button
-              type="submit"
-              disabled={isDisabled}
-              whileTap={!isDisabled ? { scale: 0.97 } : undefined}
-              className="w-full h-16 relative rounded-xl overflow-hidden font-heading text-xl tracking-wider text-white transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed group"
-              style={{
-                background: isDisabled
-                  ? '#999'
-                  : 'linear-gradient(135deg, #5F0F40 0%, #7A2358 50%, #5F0F40 100%)',
-                boxShadow: isDisabled
-                  ? 'none'
-                  : '0 4px 16px rgba(95,15,64,0.3), inset 0 1px 0 rgba(255,255,255,0.1)',
-              }}
+            <InteractiveCard
+              className="rounded-xl"
+              tiltIntensity={6}
+              liftAmount={5}
+              glowColor="rgba(155,45,139,0.15)"
             >
-              <span className="relative z-10">
-                {status === 'submitting' ? (
-                  <span className="inline-flex items-center gap-3">
-                    <MandalaSpinner />
-                    <span className="text-white/80">Sending...</span>
-                  </span>
-                ) : (
-                  <>
-                    <span>Send RSVP</span>
-                    <span className="mx-3 text-gold/60">•</span>
-                    <span className="font-hindi">RSVP भेजें</span>
-                  </>
-                )}
-              </span>
-            </motion.button>
+              <motion.button
+                type="submit"
+                disabled={isDisabled}
+                whileTap={!isDisabled ? { scale: 0.97 } : undefined}
+                className="w-full h-16 relative rounded-xl overflow-hidden font-heading text-xl tracking-wider text-white transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed group"
+                style={{
+                  background: isDisabled
+                    ? '#999'
+                    : 'linear-gradient(135deg, #5F0F40 0%, #7A2358 50%, #5F0F40 100%)',
+                  boxShadow: isDisabled
+                    ? 'none'
+                    : '0 4px 16px rgba(95,15,64,0.3), inset 0 1px 0 rgba(255,255,255,0.1)',
+                }}
+              >
+                <span className="relative z-10">
+                  {status === 'submitting' ? (
+                    <span className="inline-flex items-center gap-3">
+                      <MandalaSpinner />
+                      <span className="text-white/80">Sending...</span>
+                    </span>
+                  ) : (
+                    <>
+                      <span>Send RSVP</span>
+                      <span className="mx-3 text-gold/60">•</span>
+                      <span className="font-hindi">RSVP भेजें</span>
+                    </>
+                  )}
+                </span>
+              </motion.button>
+            </InteractiveCard>
           </ScrollReveal>
 
           {/* ─── Error Display ─── */}
