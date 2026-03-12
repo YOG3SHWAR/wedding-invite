@@ -132,7 +132,7 @@ export function RsvpSection() {
       className="py-section-mobile md:py-section px-4 relative overflow-hidden"
       style={{
         backgroundImage:
-          'radial-gradient(circle, rgba(212,175,55,0.03) 1px, transparent 1px)',
+          'radial-gradient(circle, rgba(251,139,36,0.03) 1px, transparent 1px)',
         backgroundSize: '32px 32px',
       }}
     >
@@ -147,7 +147,7 @@ export function RsvpSection() {
             <h2
               className="font-heading text-5xl md:text-7xl leading-tight tracking-wide"
               style={{
-                background: 'linear-gradient(135deg, #D4AF37 0%, #E8CC6E 40%, #D4AF37 60%, #B8941F 100%)',
+                background: 'linear-gradient(135deg, #FB8B24 0%, #FCA84E 40%, #FB8B24 60%, #E36414 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -181,7 +181,7 @@ export function RsvpSection() {
               <div
                 className={`py-4 px-6 rounded-lg border-2 transition-all duration-500 ${
                   allSelected
-                    ? 'border-gold bg-gold/10 shadow-[0_0_20px_rgba(212,175,55,0.15)]'
+                    ? 'border-gold bg-gold/10 shadow-[0_0_20px_rgba(251,139,36,0.15)]'
                     : 'border-gold/30 hover:border-gold/60 hover:bg-gold/5'
                 }`}
               >
@@ -224,7 +224,7 @@ export function RsvpSection() {
                   >
                     <motion.div
                       animate={{
-                        borderColor: isSelected ? accentColor : 'rgba(212,175,55,0.25)',
+                        borderColor: isSelected ? accentColor : 'rgba(251,139,36,0.25)',
                         boxShadow: isSelected
                           ? `0 2px 12px ${accentColor}25`
                           : '0 2px 8px rgba(0,0,0,0.04)',
@@ -248,7 +248,7 @@ export function RsvpSection() {
                           <motion.div
                             animate={{
                               scale: isSelected ? 1 : 0.8,
-                              borderColor: isSelected ? accentColor : 'rgba(212,175,55,0.3)',
+                              borderColor: isSelected ? accentColor : 'rgba(251,139,36,0.3)',
                               backgroundColor: isSelected ? accentColor : 'transparent',
                             }}
                             className="w-7 h-7 rounded-full border-2 flex items-center justify-center"
@@ -320,7 +320,7 @@ export function RsvpSection() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Enter your name"
-                  className="w-full h-14 px-5 rounded-lg bg-white/90 font-body text-maroon text-lg border border-gold/40 outline-none transition-all duration-300 focus:border-gold focus:shadow-[0_0_0_3px_rgba(212,175,55,0.2)] placeholder:text-maroon/50 placeholder:font-body"
+                  className="w-full h-14 px-5 rounded-lg bg-white/90 font-body text-maroon text-lg border border-gold/40 outline-none transition-all duration-300 focus:border-gold focus:shadow-[0_0_0_3px_rgba(251,139,36,0.2)] placeholder:text-maroon/50 placeholder:font-body"
                   aria-label="Your Name"
                 />
               </div>
@@ -336,7 +336,7 @@ export function RsvpSection() {
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="10-digit mobile number"
-                  className="w-full h-14 px-5 rounded-lg bg-white/90 font-body text-maroon text-lg border border-gold/40 outline-none transition-all duration-300 focus:border-gold focus:shadow-[0_0_0_3px_rgba(212,175,55,0.2)] placeholder:text-maroon/50 placeholder:font-body"
+                  className="w-full h-14 px-5 rounded-lg bg-white/90 font-body text-maroon text-lg border border-gold/40 outline-none transition-all duration-300 focus:border-gold focus:shadow-[0_0_0_3px_rgba(251,139,36,0.2)] placeholder:text-maroon/50 placeholder:font-body"
                   aria-label="Phone Number"
                 />
               </div>
@@ -393,10 +393,10 @@ export function RsvpSection() {
               style={{
                 background: isDisabled
                   ? '#999'
-                  : 'linear-gradient(135deg, #800020 0%, #A0334D 50%, #800020 100%)',
+                  : 'linear-gradient(135deg, #5F0F40 0%, #7A2358 50%, #5F0F40 100%)',
                 boxShadow: isDisabled
                   ? 'none'
-                  : '0 4px 16px rgba(128,0,32,0.3), inset 0 1px 0 rgba(255,255,255,0.1)',
+                  : '0 4px 16px rgba(95,15,64,0.3), inset 0 1px 0 rgba(255,255,255,0.1)',
               }}
             >
               <span className="relative z-10">

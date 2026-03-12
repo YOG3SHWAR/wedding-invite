@@ -53,7 +53,7 @@ export function HeroCountdown({ targetDate }: HeroCountdownProps) {
         >
           <span
             className="font-heading text-3xl md:text-4xl text-gold block leading-none"
-            style={{ textShadow: '0 0 10px rgba(212,175,55,0.3)' }}
+            style={{ textShadow: '0 0 10px rgba(251,139,36,0.3)' }}
           >
             {mounted ? String(value).padStart(2, '0') : '--'}
           </span>

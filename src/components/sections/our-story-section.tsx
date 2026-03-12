@@ -15,7 +15,7 @@ export function OurStorySection() {
       className="py-section-mobile md:py-section px-4 relative"
       style={{
         backgroundImage:
-          'radial-gradient(circle, rgba(212,175,55,0.03) 1px, transparent 1px)',
+          'radial-gradient(circle, rgba(251,139,36,0.03) 1px, transparent 1px)',
         backgroundSize: '32px 32px',
       }}
     >

@@ -15,7 +15,7 @@ export function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient — deeper maroon */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-[#3A000E] via-maroon to-[#3A000E]"
+        className="absolute inset-0 bg-gradient-to-b from-[#2D0620] via-maroon to-[#2D0620]"
         aria-hidden="true"
       />
 
@@ -34,7 +34,7 @@ export function HeroSection() {
         className="absolute inset-0"
         style={{
           backgroundImage:
-            'radial-gradient(circle, rgba(212,175,55,0.03) 1px, transparent 1px)',
+            'radial-gradient(circle, rgba(251,139,36,0.03) 1px, transparent 1px)',
           backgroundSize: '32px 32px',
         }}
         aria-hidden="true"
@@ -46,7 +46,7 @@ export function HeroSection() {
           className="relative border border-gold/25 px-10 py-14 md:px-20 md:py-20"
           style={{
             boxShadow:
-              'inset 0 0 0 3px transparent, inset 0 0 0 4px rgba(212,175,55,0.12)',
+              'inset 0 0 0 3px transparent, inset 0 0 0 4px rgba(251,139,36,0.12)',
           }}
         >
           {/* Corner accents — four gold right-angle lines */}
@@ -72,7 +72,7 @@ export function HeroSection() {
               animate={{ scaleX: 1 }}
               transition={{ duration: 0.6, delay: 0.5 }}
               className="mx-auto my-4 w-16 md:w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent"
-              style={{ boxShadow: '0 0 8px rgba(212,175,55,0.4)' }}
+              style={{ boxShadow: '0 0 8px rgba(251,139,36,0.4)' }}
               aria-hidden="true"
             />
 

@@ -78,7 +78,7 @@ export default async function Image() {
             <div
               style={{
                 fontSize: 72,
-                color: '#D4AF37',
+                color: '#FB8B24',
                 fontWeight: 700,
                 lineHeight: 1.2,
                 textShadow: '0 2px 12px rgba(0,0,0,0.5)',
@@ -89,7 +89,7 @@ export default async function Image() {
             <div
               style={{
                 fontSize: 28,
-                color: '#E8CC6E',
+                color: '#FCA84E',
                 marginTop: 16,
                 letterSpacing: '0.1em',
                 textShadow: '0 1px 6px rgba(0,0,0,0.4)',
@@ -101,7 +101,7 @@ export default async function Image() {
               style={{
                 width: 200,
                 height: 2,
-                backgroundColor: '#D4AF37',
+                backgroundColor: '#FB8B24',
                 marginTop: 24,
                 marginBottom: 24,
               }}
@@ -137,7 +137,7 @@ export default async function Image() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: '#800020',
+          backgroundColor: '#5F0F40',
           fontFamily: 'serif',
         }}
       >
@@ -147,7 +147,7 @@ export default async function Image() {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            border: '4px solid #D4AF37',
+            border: '4px solid #FB8B24',
             borderRadius: '16px',
             padding: '48px 80px',
           }}
@@ -155,7 +155,7 @@ export default async function Image() {
           <div
             style={{
               fontSize: 72,
-              color: '#D4AF37',
+              color: '#FB8B24',
               fontWeight: 700,
               lineHeight: 1.2,
             }}
@@ -165,7 +165,7 @@ export default async function Image() {
           <div
             style={{
               fontSize: 28,
-              color: '#E8CC6E',
+              color: '#FCA84E',
               marginTop: 16,
               letterSpacing: '0.1em',
             }}
@@ -176,7 +176,7 @@ export default async function Image() {
             style={{
               width: 200,
               height: 2,
-              backgroundColor: '#D4AF37',
+              backgroundColor: '#FB8B24',
               marginTop: 24,
               marginBottom: 24,
             }}

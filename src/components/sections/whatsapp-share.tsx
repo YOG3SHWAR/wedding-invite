@@ -14,7 +14,7 @@ export function WhatsAppShare() {
   }, [])
 
   return (
-    <section className="py-section-mobile md:py-section px-4 relative overflow-hidden bg-gradient-to-b from-maroon-dark to-[#3A000E]">
+    <section className="py-section-mobile md:py-section px-4 relative overflow-hidden bg-gradient-to-b from-maroon-dark to-[#2D0620]">
       <div className="max-w-md mx-auto text-center">
         <ScrollReveal>
           {/* English text first, Hindi as accent */}

@@ -31,7 +31,7 @@ interface Particle {
   shape: ParticleShape
 }
 
-const GOLD_COLORS = ['#D4AF37', '#E8CC6E', '#B8941F', '#FFF0C0']
+const GOLD_COLORS = ['#FB8B24', '#FCA84E', '#E36414', '#FFD4A0']
 const SHAPES: ParticleShape[] = ['circle', 'diamond', 'star']
 const DESKTOP_CAP = 200
 const MOBILE_CAP = 120

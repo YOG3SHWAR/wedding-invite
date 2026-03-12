@@ -30,7 +30,7 @@ export function RsvpConfirmation({
       particleCount: 100,
       spread: 120,
       origin: { y: 0.5 },
-      colors: ['#D4AF37', '#FFD700', '#B8860B', '#800020', '#C41E3A'],
+      colors: ['#FB8B24', '#FCA84E', '#E36414', '#5F0F40', '#9A031E'],
       disableForReducedMotion: true,
     })
   }, [])

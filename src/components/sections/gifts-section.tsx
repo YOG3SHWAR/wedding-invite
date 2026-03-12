@@ -33,8 +33,8 @@ export function GiftsSection() {
       <div
         className="absolute inset-0 opacity-[0.02]"
         style={{
-          backgroundImage: `radial-gradient(circle at 30% 30%, #D4AF37 1px, transparent 1px),
-                           radial-gradient(circle at 70% 70%, #D4AF37 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle at 30% 30%, #FB8B24 1px, transparent 1px),
+                           radial-gradient(circle at 70% 70%, #FB8B24 1px, transparent 1px)`,
           backgroundSize: '50px 50px',
         }}
         aria-hidden="true"
@@ -72,7 +72,7 @@ export function GiftsSection() {
             <h1
               className="font-heading text-4xl md:text-6xl leading-tight mb-2 tracking-wide"
               style={{
-                background: 'linear-gradient(135deg, #D4AF37 0%, #B8941F 40%, #E8CC6E 60%, #D4AF37 100%)',
+                background: 'linear-gradient(135deg, #FB8B24 0%, #E36414 40%, #FCA84E 60%, #FB8B24 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
               }}
@@ -116,7 +116,7 @@ export function GiftsSection() {
                   <div
                     className="absolute inset-0 opacity-[0.04]"
                     style={{
-                      backgroundImage: `radial-gradient(circle, #D4AF37 1px, transparent 1px)`,
+                      backgroundImage: `radial-gradient(circle, #FB8B24 1px, transparent 1px)`,
                       backgroundSize: '16px 16px',
                     }}
                   />
@@ -178,8 +178,8 @@ export function GiftsSection() {
               href="/#rsvp"
               className="inline-flex items-center gap-2 mt-6 px-8 py-3 rounded-xl text-white font-heading tracking-wide transition-all duration-300 active:scale-95"
               style={{
-                background: 'linear-gradient(135deg, #800020 0%, #A0334D 50%, #800020 100%)',
-                boxShadow: '0 4px 16px rgba(128,0,32,0.2)',
+                background: 'linear-gradient(135deg, #5F0F40 0%, #7A2358 50%, #5F0F40 100%)',
+                boxShadow: '0 4px 16px rgba(95,15,64,0.2)',
               }}
             >
               <svg

@@ -13,11 +13,19 @@
  */
 
 export const EVENT_COLORS = {
-  tilak: '#C41E3A',
-  mehndi: '#228B22',
-  sangeet: '#9B59B6',
-  haldi: '#F4C430',
-  shadi: '#800020',
+  tilak: '#9A031E',
+  mehndi: '#0F4C5C',
+  sangeet: '#5F0F40',
+  haldi: '#FB8B24',
+  shadi: '#9A031E',
+} as const
+
+export const EVENT_COLORS_LIGHT = {
+  tilak: '#E84258',
+  mehndi: '#3A9BAD',
+  sangeet: '#C490D1',
+  haldi: '#FB8B24',
+  shadi: '#E84258',
 } as const
 
 export const COUPLE = {
@@ -35,8 +43,8 @@ export const EVENTS = [
     nameHindi: 'तिलक',
     date: '26 April 2026',
     time: '10:00 AM', // placeholder
-    venue: 'Venue TBD, City', // placeholder
-    mapUrl: 'https://maps.google.com/?q=Venue+Name+City', // placeholder
+    venue: 'Agrasen Dham, Kotma',
+    mapUrl: 'https://maps.app.goo.gl/uK27iNcTgJBssRb19',
     dressCode: 'Traditional / Kurta Pajama',
     description:
       'The groom is formally welcomed and honored by the bride\'s family with a sacred tilak ceremony.',
@@ -47,8 +55,8 @@ export const EVENTS = [
     nameHindi: 'मेहंदी',
     date: '27 April 2026',
     time: '4:00 PM', // placeholder
-    venue: 'Venue TBD, City', // placeholder
-    mapUrl: 'https://maps.google.com/?q=Venue+Name+City', // placeholder
+    venue: 'Shreyash Resort',
+    mapUrl: 'https://maps.app.goo.gl/3cfPmTPmurVXm3Sw7',
     dressCode: 'Colorful / Lehenga or Saree',
     description:
       'An evening of intricate henna art, music, and celebration as the bride is adorned with beautiful mehndi designs.',
@@ -59,8 +67,8 @@ export const EVENTS = [
     nameHindi: 'संगीत',
     date: '27 April 2026',
     time: '7:00 PM', // placeholder
-    venue: 'Venue TBD, City', // placeholder
-    mapUrl: 'https://maps.google.com/?q=Venue+Name+City', // placeholder
+    venue: 'Shreyash Resort',
+    mapUrl: 'https://maps.app.goo.gl/3cfPmTPmurVXm3Sw7',
     dressCode: 'Glamorous / Party Wear',
     description:
       'A night of dance, music, and Bollywood performances celebrating the union of two families.',
@@ -71,8 +79,8 @@ export const EVENTS = [
     nameHindi: 'हल्दी',
     date: '28 April 2026',
     time: '9:00 AM', // placeholder
-    venue: 'Venue TBD, City', // placeholder
-    mapUrl: 'https://maps.google.com/?q=Venue+Name+City', // placeholder
+    venue: 'Shreyash Resort',
+    mapUrl: 'https://maps.app.goo.gl/3cfPmTPmurVXm3Sw7',
     dressCode: 'Yellow / Casual Indian',
     description:
       'A joyous morning ritual where turmeric paste is applied to bless the couple with radiance and prosperity.',
@@ -83,8 +91,8 @@ export const EVENTS = [
     nameHindi: 'शादी',
     date: '28 April 2026',
     time: '7:00 PM', // placeholder
-    venue: 'Venue TBD, City', // placeholder
-    mapUrl: 'https://maps.google.com/?q=Venue+Name+City', // placeholder
+    venue: 'Shreyash Resort',
+    mapUrl: 'https://maps.app.goo.gl/3cfPmTPmurVXm3Sw7',
     dressCode: 'Grand / Sherwani or Saree',
     description:
       'The sacred wedding ceremony where two souls unite in the presence of family, friends, and divine blessings.',

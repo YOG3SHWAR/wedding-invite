@@ -7,25 +7,25 @@
   --font-body: var(--font-body);
 
   /* Primary palette */
-  --color-maroon: #800020;
-  --color-maroon-light: #A0334D;
-  --color-maroon-dark: #600018;
-  --color-gold: #D4AF37;
-  --color-gold-light: #E8CC6E;
-  --color-gold-dark: #B8941F;
-  --color-gold-accessible: #8B6914; /* 4.83:1 on cream -- WCAG AA pass for normal text */
-  --color-emerald: #046307;
-  --color-emerald-light: #0A8A0F;
+  --color-maroon: #5F0F40;
+  --color-maroon-light: #7A2358;
+  --color-maroon-dark: #4A0B32;
+  --color-gold: #FB8B24;
+  --color-gold-light: #FCA84E;
+  --color-gold-dark: #E36414;
+  --color-gold-accessible: #C25510; /* ~4.5:1 on cream -- WCAG AA pass */
+  --color-emerald: #0F4C5C;
+  --color-emerald-light: #1A6A7C;
   --color-cream: #FFF8F0;
   --color-cream-dark: #F5E6D3;
-  --color-maroon-deeper: #3A000E;
+  --color-maroon-deeper: #2D0620;
 
   /* Per-event accent colors */
-  --color-tilak: #C41E3A;
-  --color-mehndi: #228B22;
-  --color-sangeet: #9B59B6;
-  --color-haldi: #F4C430;
-  --color-shadi: #800020;
+  --color-tilak: #9A031E;
+  --color-mehndi: #0F4C5C;
+  --color-sangeet: #5F0F40;
+  --color-haldi: #FB8B24;
+  --color-shadi: #9A031E;
 
   /* Section spacing */
   --spacing-section: 6rem;

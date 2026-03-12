@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { yatraOne, playfairDisplay, cormorantGaramond } from '@/lib/fonts'
 import { AnimationProvider } from '@/components/providers/animation-provider'
 import { GoldParticleCanvas } from '@/components/ui/gold-particle-canvas'
+import { MandalaBackground } from '@/components/ui/mandala-background'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -34,6 +35,7 @@ export default function RootLayout({
       className={`${yatraOne.variable} ${playfairDisplay.variable} ${cormorantGaramond.variable}`}
     >
       <body className="bg-cream text-maroon-dark font-body antialiased">
+        <MandalaBackground />
         <GoldParticleCanvas />
         <AnimationProvider>{children}</AnimationProvider>
       </body>

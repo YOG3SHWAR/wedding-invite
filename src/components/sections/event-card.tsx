@@ -1,4 +1,4 @@
-import { EVENT_COLORS } from '@/lib/constants'
+import { EVENT_COLORS, EVENT_COLORS_LIGHT } from '@/lib/constants'
 
 type EventColorKey = keyof typeof EVENT_COLORS
 
@@ -20,6 +20,9 @@ interface EventCardProps {
 
 export function EventCard({ event, position, dark }: EventCardProps) {
   const accentColor = EVENT_COLORS[event.colorKey]
+  const nameColor = dark
+    ? EVENT_COLORS_LIGHT[event.colorKey]
+    : EVENT_COLORS[event.colorKey]
 
   return (
     <div
@@ -31,16 +34,25 @@ export function EventCard({ event, position, dark }: EventCardProps) {
       <div
         className={`rounded-lg border-l-4 p-5 md:p-6 ${
           dark
-            ? 'bg-white/10 backdrop-blur-sm shadow-lg'
+            ? 'backdrop-blur-sm shadow-lg'
             : 'bg-cream-dark shadow-md'
         }`}
-        style={{ borderLeftColor: accentColor }}
+        style={{
+          borderLeftColor: accentColor,
+          ...(dark ? { backgroundColor: `${accentColor}12` } : {}),
+        }}
       >
-        {/* Event name: English (primary) + Hindi (accent) */}
-        <h3 className={`font-heading text-2xl leading-tight ${dark ? 'text-gold' : 'text-gold-accessible'}`}>
+        {/* Event name: English (primary) + Hindi (accent) — color-coded per event */}
+        <h3
+          className="font-heading text-2xl leading-tight"
+          style={{ color: nameColor }}
+        >
           {event.name}
         </h3>
-        <p className={`font-hindi text-xl mt-0.5 ${dark ? 'text-cream/70' : 'text-maroon-dark/75'}`}>
+        <p
+          className="font-hindi text-xl mt-0.5"
+          style={{ color: nameColor, opacity: 0.8 }}
+        >
           {event.nameHindi}
         </p>
 
