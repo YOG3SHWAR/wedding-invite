@@ -31,10 +31,10 @@
 
 ### RSVP
 
-- [ ] **RSVP-01**: Day-wise RSVP form (name, phone, which days attending)
-- [ ] **RSVP-02**: Firebase backend for RSVP data storage (free tier)
-- [ ] **RSVP-03**: RSVP confirmation screen with event summary
-- [ ] **RSVP-04**: Registry/gifts section with links or blessing note
+- [x] **RSVP-01**: Day-wise RSVP form (name, phone, which days attending)
+- [x] **RSVP-02**: Firebase backend for RSVP data storage (free tier)
+- [x] **RSVP-03**: RSVP confirmation screen with event summary
+- [x] **RSVP-04**: Registry/gifts section with links or blessing note
 
 ### Performance
 
@@ -78,10 +78,10 @@
 | CONT-04 | Phase 2 | Complete |
 | ANIM-01 | Phase 2 | Complete |
 | ANIM-02 | Phase 1 | Complete |
-| RSVP-01 | Phase 3 | Pending |
-| RSVP-02 | Phase 3 | Pending |
-| RSVP-03 | Phase 3 | Pending |
-| RSVP-04 | Phase 3 | Pending |
+| RSVP-01 | Phase 3 | Complete |
+| RSVP-02 | Phase 3 | Complete |
+| RSVP-03 | Phase 3 | Complete |
+| RSVP-04 | Phase 3 | Complete |
 | PERF-01 | Phase 1 | Complete |
 | PERF-02 | Phase 1 | Complete |
 
