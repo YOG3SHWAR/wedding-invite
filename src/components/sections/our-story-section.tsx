@@ -11,7 +11,14 @@ import { StoryMilestone } from './story-milestone'
  */
 export function OurStorySection() {
   return (
-    <section className="py-section-mobile md:py-section px-4">
+    <section
+      className="py-section-mobile md:py-section px-4 relative"
+      style={{
+        backgroundImage:
+          'radial-gradient(circle, rgba(212,175,55,0.03) 1px, transparent 1px)',
+        backgroundSize: '32px 32px',
+      }}
+    >
       <div className="max-w-5xl mx-auto">
         {/* Section heading */}
         <div className="text-center mb-12 md:mb-16">
@@ -30,7 +37,7 @@ export function OurStorySection() {
         <div className="relative">
           {/* Vertical gold center line (desktop only) */}
           <div
-            className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gold/30 -translate-x-1/2"
+            className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gold/50 -translate-x-1/2"
             aria-hidden="true"
           />
 
@@ -47,6 +54,7 @@ export function OurStorySection() {
                   key={milestone.id}
                   variant={variant}
                   delay={0.1}
+                  spring
                 >
                   {/* Mobile: show image inline above card */}
                   <div className="md:hidden flex justify-center mb-4">

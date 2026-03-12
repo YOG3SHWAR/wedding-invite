@@ -31,12 +31,12 @@ export function StoryMilestone({
     >
       {/* Content card */}
       <div
-        className={`flex-1 bg-cream border border-gold/20 rounded-lg p-5 md:p-6 shadow-sm ${
+        className={`flex-1 bg-cream border border-gold/35 rounded-lg p-5 md:p-6 shadow-sm ${
           isLeft ? 'md:text-right' : 'md:text-left'
         }`}
       >
         {/* Year badge */}
-        <span className="inline-block px-3 py-1 bg-gold/10 border border-gold/30 rounded-full font-body text-sm text-gold-dark font-semibold tracking-wider mb-3">
+        <span className="inline-block px-3 py-1 bg-gold/15 border border-gold/50 rounded-full font-body text-sm text-gold-dark font-semibold tracking-wider mb-3">
           {year}
         </span>
 
@@ -49,7 +49,7 @@ export function StoryMilestone({
         <p className="font-hindi text-lg text-gold mt-1">{titleHindi}</p>
 
         {/* Description */}
-        <p className="font-body text-base text-maroon-dark/80 mt-2 leading-relaxed">
+        <p className="font-body text-base text-maroon-dark/90 mt-2 leading-relaxed">
           {description}
         </p>
       </div>
@@ -62,7 +62,7 @@ export function StoryMilestone({
       {/* Circular image placeholder */}
       <div className="hidden md:block flex-1">
         <div
-          className={`w-28 h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden border-3 border-gold/40 shadow-lg ${
+          className={`w-28 h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden border-3 border-gold/60 shadow-lg ${
             isLeft ? '' : 'md:ml-auto'
           }`}
         >

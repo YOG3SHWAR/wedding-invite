@@ -49,12 +49,15 @@ export function HeroCountdown({ targetDate }: HeroCountdownProps) {
       {values.map((value, i) => (
         <div
           key={LABELS[i]}
-          className="border-2 border-gold/70 rounded-lg p-3 md:p-4 min-w-[70px] md:min-w-[80px] bg-maroon/30 backdrop-blur-sm"
+          className="border border-gold/60 rounded-md p-3 md:p-4 min-w-[70px] md:min-w-[80px] bg-white/10 backdrop-blur-sm"
         >
-          <span className="font-heading text-3xl md:text-4xl text-gold block leading-none">
+          <span
+            className="font-heading text-3xl md:text-4xl text-gold block leading-none"
+            style={{ textShadow: '0 0 10px rgba(212,175,55,0.3)' }}
+          >
             {mounted ? String(value).padStart(2, '0') : '--'}
           </span>
-          <span className="font-body text-xs md:text-sm text-cream/80 uppercase tracking-wider mt-1 block">
+          <span className="font-body text-xs md:text-sm text-cream uppercase tracking-wider mt-1 block">
             {LABELS[i]}
           </span>
         </div>

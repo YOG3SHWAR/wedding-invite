@@ -26,6 +26,7 @@ export function PhotoGallery() {
             Gallery
           </h2>
           <p className="font-hindi text-2xl text-gold mt-1">तस्वीरें</p>
+          <div className="mx-auto mt-4 w-20 h-px bg-gradient-to-r from-transparent via-gold to-transparent" aria-hidden="true" />
         </div>
 
         {/* Masonry grid */}
@@ -38,7 +39,7 @@ export function PhotoGallery() {
                   setIndex(i)
                   setOpen(true)
                 }}
-                className="block w-full rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                className="block w-full rounded-lg overflow-hidden border border-gold/15 hover:border-gold/35 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
                 aria-label={`View ${img.alt}`}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}

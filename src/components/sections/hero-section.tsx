@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from 'motion/react'
 import { COUPLE, WEDDING_TARGET_DATE } from '@/lib/constants'
 import { HeroCountdown } from './hero-countdown'
 
@@ -5,75 +8,138 @@ import { HeroCountdown } from './hero-countdown'
  * Full-viewport hero section with couple names, Hindi blessing,
  * wedding date, and live countdown timer.
  *
- * Server component -- only HeroCountdown is a client island.
- * Background uses a deep maroon gradient as placeholder for couple photo.
+ * Staggered cinematic entrance — each element timed like a movie title sequence.
  */
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background gradient (placeholder for couple photo with dark overlay) */}
+      {/* Background gradient — deeper maroon */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-maroon-dark via-maroon/80 to-maroon-dark"
+        className="absolute inset-0 bg-gradient-to-b from-[#3A000E] via-maroon to-[#3A000E]"
         aria-hidden="true"
       />
 
-      {/* Subtle radial glow behind content */}
+      {/* Vignette overlay */}
       <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.08)_0%,_transparent_70%)]"
+        className="absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.3) 100%)',
+        }}
         aria-hidden="true"
       />
 
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 py-20">
-        {/* Ornate decorative frame */}
-        <div className="relative inline-block px-8 py-12 md:px-16 md:py-16">
-          {/* Corner decorations */}
-          <div className="absolute top-0 left-0 w-12 h-12 md:w-16 md:h-16 border-t-2 border-l-2 border-gold/60 rounded-tl-sm" aria-hidden="true" />
-          <div className="absolute top-0 right-0 w-12 h-12 md:w-16 md:h-16 border-t-2 border-r-2 border-gold/60 rounded-tr-sm" aria-hidden="true" />
-          <div className="absolute bottom-0 left-0 w-12 h-12 md:w-16 md:h-16 border-b-2 border-l-2 border-gold/60 rounded-bl-sm" aria-hidden="true" />
-          <div className="absolute bottom-0 right-0 w-12 h-12 md:w-16 md:h-16 border-b-2 border-r-2 border-gold/60 rounded-br-sm" aria-hidden="true" />
+      {/* Subtle dot pattern for texture */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage:
+            'radial-gradient(circle, rgba(212,175,55,0.03) 1px, transparent 1px)',
+          backgroundSize: '32px 32px',
+        }}
+        aria-hidden="true"
+      />
 
-          {/* Hindi blessing (decorative accent) */}
-          <p
-            className="font-hindi text-xl md:text-2xl text-gold-light tracking-wide"
-            style={{ textShadow: '0 2px 8px rgba(0,0,0,0.4)' }}
-          >
-            शुभ विवाह
-          </p>
+      {/* Content with gold ornamental frame */}
+      <div className="relative z-10 px-4 py-20">
+        <div
+          className="relative border border-gold/25 px-10 py-14 md:px-20 md:py-20"
+          style={{
+            boxShadow:
+              'inset 0 0 0 3px transparent, inset 0 0 0 4px rgba(212,175,55,0.12)',
+          }}
+        >
+          {/* Corner accents — four gold right-angle lines */}
+          <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-gold/50" />
+          <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-gold/50" />
+          <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-gold/50" />
+          <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-gold/50" />
 
-          {/* Decorative gold line */}
-          <div className="mx-auto my-4 w-24 md:w-32 h-px bg-gradient-to-r from-transparent via-gold to-transparent" aria-hidden="true" />
+          <div className="text-center">
+            {/* Hindi blessing fades in first */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="font-hindi text-xl md:text-2xl text-gold tracking-wide"
+            >
+              शुभ विवाह
+            </motion.p>
 
-          {/* Couple names in English (primary) */}
-          <h1
-            className="font-heading text-6xl md:text-8xl lg:text-9xl text-gold leading-tight"
-            style={{ textShadow: '0 4px 16px rgba(0,0,0,0.5)' }}
-          >
-            {COUPLE.nameEnglish}
-          </h1>
+            {/* Gold line expands — with glow */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="mx-auto my-4 w-16 md:w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent"
+              style={{ boxShadow: '0 0 8px rgba(212,175,55,0.4)' }}
+              aria-hidden="true"
+            />
 
-          {/* Couple names in Hindi (secondary accent) */}
-          <h2
-            className="mt-4 font-hindi text-3xl md:text-5xl text-white/80 tracking-wide"
-            style={{ textShadow: '0 2px 12px rgba(0,0,0,0.5)' }}
-          >
-            {COUPLE.nameHindi}
-          </h2>
+            {/* Couple names scale up with spring */}
+            <motion.h1
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ type: 'spring', stiffness: 100, damping: 15, delay: 0.7 }}
+              className="font-heading text-6xl md:text-8xl lg:text-9xl text-gold leading-tight"
+              style={{ textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}
+            >
+              {COUPLE.nameEnglish}
+            </motion.h1>
 
-          {/* Wedding date */}
-          <p
-            className="mt-5 font-body text-xl md:text-2xl text-cream tracking-wider"
-            style={{ textShadow: '0 2px 8px rgba(0,0,0,0.4)' }}
-          >
-            {COUPLE.weddingDate}
-          </p>
+            {/* Hindi names fade in */}
+            <motion.h2
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
+              className="mt-4 font-hindi text-3xl md:text-5xl text-white tracking-wide"
+            >
+              {COUPLE.nameHindi}
+            </motion.h2>
 
-          {/* Decorative gold line */}
-          <div className="mx-auto mt-5 w-16 md:w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent" aria-hidden="true" />
+            {/* Date fades in */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+              className="mt-5 font-body text-xl md:text-2xl text-cream tracking-wider"
+            >
+              {COUPLE.weddingDate}
+            </motion.p>
 
-          {/* Countdown timer (client component) */}
-          <HeroCountdown targetDate={WEDDING_TARGET_DATE} />
+            {/* Countdown slides up */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.4 }}
+            >
+              <HeroCountdown targetDate={WEDDING_TARGET_DATE} />
+            </motion.div>
+          </div>
         </div>
+
+        {/* Scroll indicator — animated gold chevron */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2.0 }}
+          className="flex justify-center mt-8"
+        >
+          <motion.svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="text-gold/60 animate-bounce"
+            aria-hidden="true"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </motion.svg>
+        </motion.div>
       </div>
     </section>
   )

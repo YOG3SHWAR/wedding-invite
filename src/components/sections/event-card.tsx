@@ -15,9 +15,10 @@ interface EventCardProps {
     colorKey: EventColorKey
   }
   position: 'left' | 'right'
+  dark?: boolean
 }
 
-export function EventCard({ event, position }: EventCardProps) {
+export function EventCard({ event, position, dark }: EventCardProps) {
   const accentColor = EVENT_COLORS[event.colorKey]
 
   return (
@@ -28,19 +29,23 @@ export function EventCard({ event, position }: EventCardProps) {
       `}
     >
       <div
-        className="bg-cream-dark rounded-lg shadow-md border-l-4 p-5 md:p-6"
+        className={`rounded-lg border-l-4 p-5 md:p-6 ${
+          dark
+            ? 'bg-white/10 backdrop-blur-sm shadow-lg'
+            : 'bg-cream-dark shadow-md'
+        }`}
         style={{ borderLeftColor: accentColor }}
       >
         {/* Event name: English (primary) + Hindi (accent) */}
-        <h3 className="font-heading text-2xl text-gold-accessible leading-tight">
+        <h3 className={`font-heading text-2xl leading-tight ${dark ? 'text-gold' : 'text-gold-accessible'}`}>
           {event.name}
         </h3>
-        <p className="font-hindi text-xl text-maroon-dark/60 mt-0.5">
+        <p className={`font-hindi text-xl mt-0.5 ${dark ? 'text-cream/70' : 'text-maroon-dark/75'}`}>
           {event.nameHindi}
         </p>
 
         {/* Date and time */}
-        <div className="flex items-center gap-2 mt-3 text-maroon-dark/90">
+        <div className={`flex items-center gap-2 mt-3 ${dark ? 'text-cream/85' : 'text-maroon-dark/90'}`}>
           <svg
             width="18"
             height="18"
@@ -50,7 +55,7 @@ export function EventCard({ event, position }: EventCardProps) {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="flex-shrink-0 text-gold"
+            className={`flex-shrink-0 ${dark ? 'text-gold-light' : 'text-gold'}`}
             aria-hidden="true"
           >
             <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
@@ -64,7 +69,7 @@ export function EventCard({ event, position }: EventCardProps) {
         </div>
 
         {/* Venue with map link */}
-        <div className="flex items-start gap-2 mt-2 text-maroon-dark/90">
+        <div className={`flex items-start gap-2 mt-2 ${dark ? 'text-cream/85' : 'text-maroon-dark/90'}`}>
           <svg
             width="18"
             height="18"
@@ -74,7 +79,7 @@ export function EventCard({ event, position }: EventCardProps) {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="flex-shrink-0 text-gold mt-0.5"
+            className={`flex-shrink-0 mt-0.5 ${dark ? 'text-gold-light' : 'text-gold'}`}
             aria-hidden="true"
           >
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
@@ -84,14 +89,18 @@ export function EventCard({ event, position }: EventCardProps) {
             href={event.mapUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-body text-sm text-gold-accessible underline underline-offset-2 hover:text-gold-dark transition-colors"
+            className={`font-body text-sm underline underline-offset-2 transition-colors ${
+              dark
+                ? 'text-gold-light hover:text-gold'
+                : 'text-gold-accessible hover:text-gold-dark'
+            }`}
           >
             {event.venue}
           </a>
         </div>
 
         {/* Dress code */}
-        <div className="flex items-center gap-2 mt-2 text-maroon-dark/90">
+        <div className={`flex items-center gap-2 mt-2 ${dark ? 'text-cream/85' : 'text-maroon-dark/90'}`}>
           <svg
             width="18"
             height="18"
@@ -101,7 +110,7 @@ export function EventCard({ event, position }: EventCardProps) {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="flex-shrink-0 text-gold"
+            className={`flex-shrink-0 ${dark ? 'text-gold-light' : 'text-gold'}`}
             aria-hidden="true"
           >
             <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
@@ -112,7 +121,7 @@ export function EventCard({ event, position }: EventCardProps) {
         </div>
 
         {/* Description */}
-        <p className="font-body text-sm text-maroon-dark/80 mt-3 leading-relaxed">
+        <p className={`font-body text-sm mt-3 leading-relaxed ${dark ? 'text-cream/85' : 'text-maroon-dark/90'}`}>
           {event.description}
         </p>
       </div>

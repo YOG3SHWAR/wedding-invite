@@ -55,14 +55,14 @@ function isMobileDevice(): boolean {
 // --- Particle factory -----------------------------------------------------------
 
 function createTrailParticle(x: number, y: number): Particle {
-  const maxLife = Math.floor(rand(40, 80))
+  const maxLife = Math.floor(rand(25, 50))
   const initialOpacity = rand(0.6, 1.0)
   return {
     x,
     y,
     vx: rand(-1.5, 1.5),
     vy: rand(-2.5, -0.3),
-    size: rand(2, 6),
+    size: rand(1.5, 4),
     opacity: initialOpacity,
     initialOpacity,
     life: 0,
@@ -73,14 +73,14 @@ function createTrailParticle(x: number, y: number): Particle {
 }
 
 function createBurstParticle(x: number, y: number): Particle {
-  const maxLife = Math.floor(rand(30, 60))
+  const maxLife = Math.floor(rand(20, 40))
   const initialOpacity = rand(0.7, 1.0)
   return {
     x,
     y,
     vx: rand(-3.5, 3.5),
     vy: rand(-4, 1),
-    size: rand(2.5, 7),
+    size: rand(1.8, 5),
     opacity: initialOpacity,
     initialOpacity,
     life: 0,
@@ -213,7 +213,7 @@ export function GoldParticleCanvas() {
       const touch = e.touches[0]
       if (!touch) return
       // Burst effect on tap
-      const count = Math.floor(rand(8, 12))
+      const count = Math.floor(rand(5, 8))
       const particles = particlesRef.current
       for (let i = 0; i < count && particles.length < particleCap; i++) {
         particles.push(createBurstParticle(touch.clientX, touch.clientY))
@@ -245,7 +245,7 @@ export function GoldParticleCanvas() {
 
       // Spawn trail particles from pointer
       if (pointerRef.current.active) {
-        const count = Math.floor(rand(3, 5))
+        const count = Math.floor(rand(2, 3))
         for (let i = 0; i < count && particles.length < particleCap; i++) {
           particles.push(
             createTrailParticle(pointerRef.current.x, pointerRef.current.y)

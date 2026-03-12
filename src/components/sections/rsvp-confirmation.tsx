@@ -15,45 +15,6 @@ function getEventDetails(eventName: string) {
   return EVENTS.find((e) => e.name === eventName)
 }
 
-/** Ornate corner decoration */
-function CornerDecoration({ className }: { className?: string }) {
-  return (
-    <svg
-      width="40"
-      height="40"
-      viewBox="0 0 40 40"
-      fill="none"
-      className={className}
-      aria-hidden="true"
-    >
-      <path
-        d="M2 38 C2 20, 6 10, 16 4 C10 10, 7 18, 7 28"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        fill="none"
-        opacity="0.6"
-      />
-      <path
-        d="M2 38 C12 34, 22 28, 28 18 C22 24, 14 30, 4 34"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        fill="none"
-        opacity="0.4"
-      />
-      <path
-        d="M4 36 C8 26, 14 18, 22 12"
-        stroke="currentColor"
-        strokeWidth="1"
-        fill="none"
-        opacity="0.3"
-        strokeDasharray="2 3"
-      />
-      <circle cx="2" cy="38" r="2.5" fill="currentColor" opacity="0.7" />
-      <circle cx="16" cy="4" r="1.5" fill="currentColor" opacity="0.4" />
-    </svg>
-  )
-}
-
 export function RsvpConfirmation({
   selectedDays,
   guestName,
@@ -64,41 +25,14 @@ export function RsvpConfirmation({
     if (confettiFired.current) return
     confettiFired.current = true
 
-    // Grand burst — center stage
+    // Single celebratory burst
     confetti({
-      particleCount: 200,
+      particleCount: 100,
       spread: 120,
       origin: { y: 0.5 },
       colors: ['#D4AF37', '#FFD700', '#B8860B', '#800020', '#C41E3A'],
       disableForReducedMotion: true,
     })
-
-    // Second burst — left side
-    const t1 = setTimeout(() => {
-      confetti({
-        particleCount: 80,
-        spread: 80,
-        origin: { y: 0.6, x: 0.25 },
-        colors: ['#D4AF37', '#FFD700', '#E8CC6E'],
-        disableForReducedMotion: true,
-      })
-    }, 500)
-
-    // Third burst — right side
-    const t2 = setTimeout(() => {
-      confetti({
-        particleCount: 80,
-        spread: 80,
-        origin: { y: 0.6, x: 0.75 },
-        colors: ['#D4AF37', '#FFD700', '#E8CC6E'],
-        disableForReducedMotion: true,
-      })
-    }, 900)
-
-    return () => {
-      clearTimeout(t1)
-      clearTimeout(t2)
-    }
   }, [])
 
   const selectedDayData = RSVP_DAYS.filter((_, index) =>
@@ -112,60 +46,18 @@ export function RsvpConfirmation({
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-16 bg-cream relative overflow-hidden">
-      {/* Decorative background dots */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: `radial-gradient(circle, #D4AF37 1px, transparent 1px)`,
-          backgroundSize: '40px 40px',
-        }}
-        aria-hidden="true"
-      />
-
       {/* ─── Thank You Header ─── */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.6, rotate: -5 }}
-        animate={{ opacity: 1, scale: 1, rotate: 0 }}
-        transition={{ type: 'spring', stiffness: 100, damping: 12, duration: 0.8 }}
-        className="text-center mb-12 relative"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ type: 'spring', stiffness: 100, damping: 15 }}
+        className="text-center mb-12"
       >
-        {/* Corner decorations around header */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          className="absolute -top-6 -left-6 md:-left-12 text-gold"
-        >
-          <CornerDecoration />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          className="absolute -top-6 -right-6 md:-right-12 text-gold scale-x-[-1]"
-        >
-          <CornerDecoration />
-        </motion.div>
-
-        {/* Gold divider */}
-        <motion.div
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="mx-auto mb-6 w-32 md:w-48 h-px bg-gradient-to-r from-transparent via-gold to-transparent"
-        />
-
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, type: 'spring', stiffness: 80 }}
-          className="font-heading text-6xl md:text-8xl leading-tight"
-          style={{
-            background: 'linear-gradient(135deg, #D4AF37 0%, #E8CC6E 40%, #B8941F 60%, #D4AF37 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            filter: 'drop-shadow(0 4px 8px rgba(212,175,55,0.3))',
-          }}
+          className="font-heading text-6xl md:text-8xl leading-tight text-maroon"
         >
           Thank You, {guestName}!
         </motion.h2>
@@ -174,7 +66,7 @@ export function RsvpConfirmation({
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="font-hindi text-2xl md:text-3xl text-maroon/60 mt-3"
+          className="font-hindi text-2xl md:text-3xl text-maroon/70 mt-3"
         >
           धन्यवाद!
         </motion.p>
@@ -183,20 +75,12 @@ export function RsvpConfirmation({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="font-body text-maroon/60 mt-2"
+          className="font-body text-maroon/70 mt-2"
         >
           Your RSVP has been recorded
-          <span className="mx-2 text-gold/40">•</span>
+          <span className="mx-2 text-gold/60">•</span>
           <span className="font-hindi">आपकी उपस्थिति दर्ज हो गई</span>
         </motion.p>
-
-        {/* Gold divider */}
-        <motion.div
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="mx-auto mt-6 w-24 md:w-36 h-px bg-gradient-to-r from-transparent via-gold to-transparent"
-        />
       </motion.div>
 
       {/* ─── Event Summary Cards ─── */}
@@ -217,7 +101,7 @@ export function RsvpConfirmation({
               }}
               className="relative bg-white/95 rounded-xl overflow-hidden shadow-sm"
               style={{
-                boxShadow: `0 2px 12px rgba(0,0,0,0.04), 0 0 0 1px ${accentColor}15`,
+                boxShadow: `0 2px 12px rgba(0,0,0,0.08), 0 0 0 1px ${accentColor}30`,
               }}
             >
               {/* Accent bar */}
@@ -233,8 +117,8 @@ export function RsvpConfirmation({
                     className="font-body text-xs tracking-[0.2em] uppercase px-3 py-1 rounded-full border"
                     style={{
                       color: accentColor,
-                      borderColor: `${accentColor}30`,
-                      backgroundColor: `${accentColor}08`,
+                      borderColor: `${accentColor}50`,
+                      backgroundColor: `${accentColor}15`,
                     }}
                   >
                     {day.label} — {day.date}
@@ -251,24 +135,24 @@ export function RsvpConfirmation({
                       <div
                         key={eventName}
                         className="pl-4 border-l-2"
-                        style={{ borderLeftColor: `${accentColor}40` }}
+                        style={{ borderLeftColor: `${accentColor}60` }}
                       >
                         <p className="font-heading text-maroon font-semibold">
                           {event.name}
-                          <span className="font-hindi text-maroon/50 ml-2 font-normal">
+                          <span className="font-hindi text-maroon/65 ml-2 font-normal">
                             {event.nameHindi}
                           </span>
                         </p>
                         <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
-                          <span className="font-body text-maroon/60 text-sm">
+                          <span className="font-body text-maroon/75 text-sm">
                             {event.time}
                           </span>
-                          <span className="text-gold/40 text-xs">•</span>
-                          <span className="font-body text-maroon/60 text-sm">
+                          <span className="text-gold/60 text-xs">•</span>
+                          <span className="font-body text-maroon/75 text-sm">
                             {event.venue}
                           </span>
                         </div>
-                        <p className="font-body text-maroon/45 text-xs mt-1">
+                        <p className="font-body text-maroon/65 text-xs mt-1">
                           Dress: {event.dressCode}
                         </p>
                       </div>

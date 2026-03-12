@@ -12,6 +12,10 @@ const variants: Record<string, Variants> = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   },
+  scaleUp: {
+    hidden: { opacity: 0, scale: 0.85 },
+    visible: { opacity: 1, scale: 1 },
+  },
   slideLeft: {
     hidden: { opacity: 0, x: -60 },
     visible: { opacity: 1, x: 0 },
@@ -27,6 +31,7 @@ interface ScrollRevealProps {
   variant?: keyof typeof variants
   delay?: number
   duration?: number
+  spring?: boolean
   className?: string
 }
 
@@ -34,16 +39,21 @@ export function ScrollReveal({
   children,
   variant = 'fadeUp',
   delay = 0,
-  duration = 0.6,
+  duration = 0.7,
+  spring = false,
   className,
 }: ScrollRevealProps) {
+  const transition = spring
+    ? { delay, type: 'spring' as const, stiffness: 100, damping: 15 }
+    : { duration, delay, ease: 'easeOut' as const }
+
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, margin: '-50px' }}
       variants={variants[variant]}
-      transition={{ duration, delay, ease: 'easeOut' }}
+      transition={transition}
       className={className}
     >
       {children}

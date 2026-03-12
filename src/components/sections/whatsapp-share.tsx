@@ -14,37 +14,14 @@ export function WhatsAppShare() {
   }, [])
 
   return (
-    <section className="py-section-mobile md:py-section px-4 relative overflow-hidden">
-      {/* Gold decorative divider at top */}
-      <div
-        className="flex items-center justify-center gap-3 mb-12 md:mb-16"
-        aria-hidden="true"
-      >
-        <div className="h-px flex-1 max-w-[120px] md:max-w-[200px] bg-gradient-to-r from-transparent to-gold" />
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 32 32"
-          fill="none"
-          className="text-gold flex-shrink-0"
-        >
-          <path
-            d="M16 4L20 16L16 28L12 16Z"
-            fill="currentColor"
-            opacity="0.6"
-          />
-          <circle cx="16" cy="16" r="2" fill="currentColor" />
-        </svg>
-        <div className="h-px flex-1 max-w-[120px] md:max-w-[200px] bg-gradient-to-l from-transparent to-gold" />
-      </div>
-
+    <section className="py-section-mobile md:py-section px-4 relative overflow-hidden bg-gradient-to-b from-maroon-dark to-[#3A000E]">
       <div className="max-w-md mx-auto text-center">
         <ScrollReveal>
           {/* English text first, Hindi as accent */}
-          <p className="font-heading text-2xl md:text-3xl text-gold-accessible tracking-wide mb-2">
+          <p className="font-heading text-2xl md:text-3xl text-gold tracking-wide mb-2">
             Share this Invitation
           </p>
-          <p className="font-hindi text-lg md:text-xl text-maroon/50 mb-8">
+          <p className="font-hindi text-lg md:text-xl text-cream/80 mb-8">
             इस निमंत्रण को परिवार और दोस्तों के साथ साझा करें
           </p>
         </ScrollReveal>
@@ -79,11 +56,10 @@ export function WhatsAppShare() {
         {/* Bottom blessing text */}
         <ScrollReveal delay={0.25}>
           <div className="mt-12 md:mt-16">
-            <div className="mx-auto mb-4 w-20 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-            <p className="font-body text-sm text-maroon/40 italic">
+            <p className="font-body text-sm text-cream/70 italic">
               With love and blessings
             </p>
-            <p className="font-hindi text-sm text-maroon/30 mt-1">
+            <p className="font-hindi text-sm text-cream/60 mt-1">
               प्रेम और आशीर्वाद के साथ
             </p>
           </div>

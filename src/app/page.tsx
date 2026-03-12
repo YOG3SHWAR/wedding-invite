@@ -16,19 +16,13 @@ export default function Home() {
 
       <OurStorySection />
 
-      <SectionDivider />
-
       <EventTimeline />
 
       <SectionDivider />
 
       <PhotoGallery />
 
-      <SectionDivider />
-
       <VideoSection />
-
-      <SectionDivider />
 
       <RsvpSection />
 

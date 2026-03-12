@@ -6,7 +6,7 @@ import { type ReactNode } from 'react'
 const containerVariants = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.15, delayChildren: 0.1 },
+    transition: { staggerChildren: 0.1, delayChildren: 0.1 },
   },
 }
 
