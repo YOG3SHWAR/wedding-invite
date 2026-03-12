@@ -78,6 +78,65 @@ export const EVENTS = [
   },
 ] as const
 
+export const RSVP_DAYS = [
+  {
+    label: 'Day 1',
+    labelHindi: 'पहला दिन',
+    date: '26 April',
+    events: ['Tilak'],
+    colorKey: 'tilak' as const,
+  },
+  {
+    label: 'Day 2',
+    labelHindi: 'दूसरा दिन',
+    date: '27 April',
+    events: ['Mehndi', 'Sangeet'],
+    colorKey: 'mehndi' as const,
+  },
+  {
+    label: 'Day 3',
+    labelHindi: 'तीसरा दिन',
+    date: '28 April',
+    events: ['Haldi', 'Shadi'],
+    colorKey: 'haldi' as const,
+  },
+] as const
+
+export const GIFT_ITEMS = [
+  {
+    id: 'gift-1',
+    name: 'Silver Pooja Thali Set',
+    nameHindi: 'चांदी की पूजा थाली सेट',
+    priceRange: '₹2,000 - ₹5,000',
+    image: '/images/gifts/placeholder.webp',
+    buyUrl: 'https://example.com',
+  },
+  {
+    id: 'gift-2',
+    name: 'Brass Diya Set',
+    nameHindi: 'पीतल दीया सेट',
+    priceRange: '₹1,000 - ₹3,000',
+    image: '/images/gifts/placeholder.webp',
+    buyUrl: 'https://example.com',
+  },
+  {
+    id: 'gift-3',
+    name: 'Silk Bedsheet Set',
+    nameHindi: 'सिल्क बेडशीट सेट',
+    priceRange: '₹3,000 - ₹7,000',
+    image: '/images/gifts/placeholder.webp',
+    buyUrl: 'https://example.com',
+  },
+  {
+    id: 'gift-4',
+    name: 'Kitchen Appliance Set',
+    nameHindi: 'किचन उपकरण सेट',
+    priceRange: '₹5,000 - ₹10,000',
+    image: '/images/gifts/placeholder.webp',
+    buyUrl: 'https://example.com',
+  },
+] as const
+
 export const STORY_MILESTONES = [
   {
     id: 'how-we-met',
