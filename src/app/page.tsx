@@ -5,6 +5,7 @@ import { EventTimeline } from '@/components/sections/event-timeline'
 import { PhotoGallery } from '@/components/sections/photo-gallery'
 import { VideoSection } from '@/components/sections/video-section'
 import { RsvpSection } from '@/components/sections/rsvp-section'
+import { WhatsAppShare } from '@/components/sections/whatsapp-share'
 
 export default function Home() {
   return (
@@ -30,6 +31,8 @@ export default function Home() {
       <SectionDivider />
 
       <RsvpSection />
+
+      <WhatsAppShare />
     </main>
   )
 }
