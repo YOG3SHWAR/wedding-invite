@@ -17,10 +17,10 @@ describe('RsvpConfirmation', () => {
   it('renders summary cards for selected days', () => {
     render(<RsvpConfirmation selectedDays={[1, 3]} guestName="Rahul" />)
     // Day 1 = Tilak
-    expect(screen.getByText('पहला दिन')).toBeInTheDocument()
+    expect(screen.getByText('Day 1 — 26 April')).toBeInTheDocument()
     expect(screen.getByText('Tilak', { exact: false })).toBeInTheDocument()
     // Day 3 = Haldi + Shadi
-    expect(screen.getByText('तीसरा दिन')).toBeInTheDocument()
+    expect(screen.getByText('Day 3 — 28 April')).toBeInTheDocument()
     expect(screen.getByText('Haldi', { exact: false })).toBeInTheDocument()
     expect(screen.getByText('Shadi', { exact: false })).toBeInTheDocument()
   })
@@ -46,9 +46,9 @@ describe('RsvpConfirmation', () => {
     expect(link).toHaveAttribute('target', '_blank')
   })
 
-  it('renders back to top button', () => {
+  it('renders back to invitation button', () => {
     render(<RsvpConfirmation selectedDays={[1]} guestName="Rahul" />)
-    expect(screen.getByText('Back to Top')).toBeInTheDocument()
+    expect(screen.getByText('↑ Back to Invitation')).toBeInTheDocument()
   })
 
   it('fires confetti on mount', () => {
