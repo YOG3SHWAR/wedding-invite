@@ -62,7 +62,7 @@ Plans:
   2. RSVP data appears in Firebase Firestore after submission, with security rules preventing client-side reads of other guests' data
   3. After submitting, guest sees a full-screen confirmation with a summary of which events they are attending
   4. Registry/gifts section is visible with links or a blessing note
-**Plans:** 3 plans
+**Plans:** 2/3 plans executed
 
 Plans:
 - [ ] 03-00-PLAN.md — Install deps, create data constants (RSVP_DAYS, GIFT_ITEMS), Firebase config, RSVP submit logic, and Wave 0 test stubs
@@ -93,5 +93,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 |-------|----------------|--------|-----------|
 | 1. Foundation + Design System | 2/2 | Complete   | 2026-03-11 |
 | 2. Presentation Sections | 4/4 | Complete   | 2026-03-12 |
-| 3. RSVP System | 0/3 | Not started | - |
+| 3. RSVP System | 2/3 | In Progress|  |
 | 4. Polish + Launch Verification | 0/1 | Not started | - |
