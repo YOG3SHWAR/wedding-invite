@@ -1,0 +1,17 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // RSVP responses: guests can create/update, but cannot read or delete
+    match /rsvps/{phoneId} {
+      allow create, update: if true;
+      allow read, delete: if false;
+    }
+
+    // Deny all other access by default
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
