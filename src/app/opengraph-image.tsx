@@ -14,7 +14,9 @@ export default async function Image() {
 
   let photoSrc: ArrayBuffer | null = null
   try {
-    const res = await fetch(`${baseUrl}/images/og-couple.jpg`)
+    const res = await fetch(`${baseUrl}/images/og-couple.jpg`, {
+      cache: 'force-cache',
+    })
     if (res.ok) photoSrc = await res.arrayBuffer()
   } catch {
     /* fallback to maroon design */

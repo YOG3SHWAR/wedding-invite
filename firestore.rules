@@ -5,8 +5,8 @@ service cloud.firestore {
 
     // RSVP responses: guests can create/update, but cannot read or delete
     match /rsvps/{phoneId} {
-      allow create, update: if true;
-      allow read, delete: if false;
+      allow create, update, read: if true;
+      allow delete: if false;
     }
 
     // Deny all other access by default

@@ -14,14 +14,11 @@ export const metadata: Metadata = {
     title: 'Yogi & Sudha Wedding',
     description: 'Join us for our wedding celebration! 28 April 2026',
     type: 'website',
-    images: [
-      {
-        url: '/opengraph-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Yogi & Sudha Wedding Invitation',
-      },
-    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Yogi & Sudha Wedding',
+    description: 'Join us for our wedding celebration! 28 April 2026',
   },
 }
 
