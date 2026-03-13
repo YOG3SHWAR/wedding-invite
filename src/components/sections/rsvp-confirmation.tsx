@@ -99,7 +99,7 @@ export function RsvpConfirmation({
                 stiffness: 100,
                 damping: 14,
               }}
-              className="relative bg-white/95 rounded-xl overflow-hidden shadow-sm"
+              className="relative bg-white rounded-xl overflow-hidden shadow-md"
               style={{
                 boxShadow: `0 2px 12px rgba(0,0,0,0.08), 0 0 0 1px ${accentColor}30`,
               }}

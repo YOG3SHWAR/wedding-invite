@@ -35,7 +35,7 @@ export function PhotoGallery() {
           {PLACEHOLDER_GALLERY.map((img, i) => (
             <StaggerItem key={img.id} className="break-inside-avoid">
               <InteractiveCard
-                className="block w-full rounded-lg overflow-hidden border border-gold/15 hover:border-gold/35 shadow-md cursor-pointer"
+                className="block w-full rounded-lg overflow-hidden border border-gold/50 hover:border-gold/70 shadow-md cursor-pointer"
                 tiltIntensity={8}
                 liftAmount={6}
               >

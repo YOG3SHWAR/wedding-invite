@@ -136,8 +136,8 @@ export function InteractiveCard({
         y: isHovered ? -liftAmount : 0,
         scale: isHovered ? 1.02 : 1,
         boxShadow: isHovered
-          ? '0 20px 40px rgba(0,0,0,0.12), 0 8px 16px rgba(251,139,36,0.08)'
-          : '0 2px 8px rgba(0,0,0,0.04)',
+          ? '0 20px 40px rgba(0,0,0,0.18), 0 8px 16px rgba(251,139,36,0.12)'
+          : '0 4px 12px rgba(0,0,0,0.1)',
       }}
       transition={{ type: 'spring', stiffness: 300, damping: 25 }}
       onMouseMove={handleMouseMove}

@@ -107,7 +107,7 @@ export function GiftsSection() {
           {GIFT_ITEMS.map((gift, index) => (
             <ScrollReveal key={gift.id} delay={0.1 * index}>
               <InteractiveCard
-                className="rounded-xl border border-gold/15 overflow-hidden bg-white/95 shadow-sm group"
+                className="rounded-xl border border-gold/50 overflow-hidden bg-white shadow-md group"
                 tiltIntensity={10}
                 liftAmount={6}
               >

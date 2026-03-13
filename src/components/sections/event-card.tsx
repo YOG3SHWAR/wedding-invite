@@ -40,7 +40,7 @@ export function EventCard({ event, position, dark }: EventCardProps) {
         }`}
         style={{
           borderLeftColor: accentColor,
-          ...(dark ? { backgroundColor: `${accentColor}12` } : {}),
+          ...(dark ? { backgroundColor: `${accentColor}50` } : {}),
         }}
         glowColor={`${accentColor}20`}
       >

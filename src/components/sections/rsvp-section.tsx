@@ -243,7 +243,7 @@ export function RsvpSection() {
                           : '0 2px 8px rgba(0,0,0,0.04)',
                       }}
                       transition={{ duration: 0.4 }}
-                      className="relative overflow-hidden rounded-xl border-2 bg-white/90"
+                      className="relative overflow-hidden rounded-xl border-2 bg-white"
                     >
                       {/* Decorative accent bar at top */}
                       <motion.div
@@ -334,7 +334,7 @@ export function RsvpSection() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Enter your name"
-                  className="w-full h-14 px-5 rounded-lg bg-white/90 font-body text-maroon text-lg border border-gold/40 outline-none transition-all duration-300 focus:border-gold focus:shadow-[0_0_0_3px_rgba(251,139,36,0.2)] placeholder:text-maroon/50 placeholder:font-body"
+                  className="w-full h-14 px-5 rounded-lg bg-white font-body text-maroon text-lg border border-gold/40 outline-none transition-all duration-300 focus:border-gold focus:shadow-[0_0_0_3px_rgba(251,139,36,0.2)] placeholder:text-maroon/50 placeholder:font-body"
                   aria-label="Your Name"
                 />
               </div>
@@ -350,7 +350,7 @@ export function RsvpSection() {
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="10-digit mobile number"
-                  className="w-full h-14 px-5 rounded-lg bg-white/90 font-body text-maroon text-lg border border-gold/40 outline-none transition-all duration-300 focus:border-gold focus:shadow-[0_0_0_3px_rgba(251,139,36,0.2)] placeholder:text-maroon/50 placeholder:font-body"
+                  className="w-full h-14 px-5 rounded-lg bg-white font-body text-maroon text-lg border border-gold/40 outline-none transition-all duration-300 focus:border-gold focus:shadow-[0_0_0_3px_rgba(251,139,36,0.2)] placeholder:text-maroon/50 placeholder:font-body"
                   aria-label="Phone Number"
                 />
               </div>
@@ -361,7 +361,7 @@ export function RsvpSection() {
                   <span className="font-body text-sm text-gold-accessible">Number of Guests</span>
                   <span className="font-hindi text-xs text-maroon/60 ml-2">/ मेहमानों की संख्या</span>
                 </label>
-                <div className="flex items-center border border-gold/35 rounded-lg overflow-hidden bg-white/90 w-fit">
+                <div className="flex items-center border border-gold/35 rounded-lg overflow-hidden bg-white w-fit">
                   <button
                     type="button"
                     onClick={() => setGuestCount((c) => Math.max(1, c - 1))}

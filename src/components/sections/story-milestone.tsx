@@ -33,7 +33,7 @@ export function StoryMilestone({
     >
       {/* Content card */}
       <InteractiveCard
-        className={`flex-1 bg-cream border border-gold/35 rounded-lg p-5 md:p-6 shadow-sm ${
+        className={`flex-1 bg-white border border-gold/60 rounded-lg p-5 md:p-6 shadow-md ${
           isLeft ? 'md:text-right' : 'md:text-left'
         }`}
       >
