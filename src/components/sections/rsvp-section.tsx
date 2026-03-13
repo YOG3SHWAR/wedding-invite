@@ -321,81 +321,122 @@ export function RsvpSection() {
           </div>
 
           {/* ─── Form Fields ─── */}
-          <ScrollReveal delay={0.4}>
-            <div className="space-y-6 mb-10">
-              {/* Name field */}
-              <div>
-                <label className="block mb-2">
-                  <span className="font-body text-sm text-gold-accessible">Your Name</span>
-                  <span className="font-hindi text-xs text-maroon/60 ml-2">/ आपका नाम</span>
-                </label>
-                <input
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Enter your name"
-                  className="w-full h-14 px-5 rounded-lg bg-white font-body text-maroon text-lg border border-gold/40 outline-none transition-all duration-300 focus:border-gold focus:shadow-[0_0_0_3px_rgba(251,139,36,0.2)] placeholder:text-maroon/50 placeholder:font-body"
-                  aria-label="Your Name"
-                />
-              </div>
-
-              {/* Phone field */}
-              <div>
-                <label className="block mb-2">
-                  <span className="font-body text-sm text-gold-accessible">Phone Number</span>
-                  <span className="font-hindi text-xs text-maroon/60 ml-2">/ फ़ोन नंबर</span>
-                </label>
-                <input
-                  type="tel"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  placeholder="10-digit mobile number"
-                  className="w-full h-14 px-5 rounded-lg bg-white font-body text-maroon text-lg border border-gold/40 outline-none transition-all duration-300 focus:border-gold focus:shadow-[0_0_0_3px_rgba(251,139,36,0.2)] placeholder:text-maroon/50 placeholder:font-body"
-                  aria-label="Phone Number"
-                />
-              </div>
-
-              {/* Guest Count */}
-              <div>
-                <label className="block mb-2">
-                  <span className="font-body text-sm text-gold-accessible">Number of Guests</span>
-                  <span className="font-hindi text-xs text-maroon/60 ml-2">/ मेहमानों की संख्या</span>
-                </label>
-                <div className="flex items-center border border-gold/35 rounded-lg overflow-hidden bg-white w-fit">
-                  <button
-                    type="button"
-                    onClick={() => setGuestCount((c) => Math.max(1, c - 1))}
-                    className="w-14 h-14 flex items-center justify-center text-2xl font-heading text-gold hover:bg-gold/10 active:bg-gold/15 transition-colors"
-                    aria-label="Decrease guest count"
-                  >
-                    −
-                  </button>
+          <div className="space-y-6 mb-10">
+            {/* Name field */}
+            <ScrollReveal delay={0.4}>
+              <InteractiveCard
+                className="rounded-lg"
+                tiltIntensity={4}
+                liftAmount={3}
+                glowColor="rgba(251,139,36,0.12)"
+              >
+                <div className="p-1">
+                  <label className="block mb-2">
+                    <span className="font-body text-sm text-gold-accessible">Your Name</span>
+                    <span className="font-hindi text-xs text-maroon/60 ml-2">/ आपका नाम</span>
+                  </label>
                   <input
-                    type="number"
-                    value={guestCount}
-                    onChange={(e) => {
-                      const val = parseInt(e.target.value, 10)
-                      if (!isNaN(val) && val >= 1 && val <= 20) {
-                        setGuestCount(val)
-                      }
-                    }}
-                    min={1}
-                    max={20}
-                    className="w-16 h-14 text-center font-heading text-xl text-maroon bg-transparent outline-none border-x border-gold/35 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                    aria-label="Guest count"
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Enter your name"
+                    className="w-full h-14 px-5 rounded-lg bg-white font-body text-maroon text-lg border border-gold/40 outline-none transition-all duration-300 focus:border-gold focus:shadow-[0_0_0_3px_rgba(251,139,36,0.2)] placeholder:text-maroon/50 placeholder:font-body"
+                    aria-label="Your Name"
                   />
-                  <button
-                    type="button"
-                    onClick={() => setGuestCount((c) => Math.min(20, c + 1))}
-                    className="w-14 h-14 flex items-center justify-center text-2xl font-heading text-gold hover:bg-gold/10 active:bg-gold/15 transition-colors"
-                    aria-label="Increase guest count"
-                  >
-                    +
-                  </button>
                 </div>
-              </div>
-            </div>
-          </ScrollReveal>
+              </InteractiveCard>
+            </ScrollReveal>
+
+            {/* Phone field */}
+            <ScrollReveal delay={0.5}>
+              <InteractiveCard
+                className="rounded-lg"
+                tiltIntensity={4}
+                liftAmount={3}
+                glowColor="rgba(251,139,36,0.12)"
+              >
+                <div className="p-1">
+                  <label className="block mb-2">
+                    <span className="font-body text-sm text-gold-accessible">Phone Number</span>
+                    <span className="font-hindi text-xs text-maroon/60 ml-2">/ फ़ोन नंबर</span>
+                  </label>
+                  <input
+                    type="tel"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    placeholder="10-digit mobile number"
+                    className="w-full h-14 px-5 rounded-lg bg-white font-body text-maroon text-lg border border-gold/40 outline-none transition-all duration-300 focus:border-gold focus:shadow-[0_0_0_3px_rgba(251,139,36,0.2)] placeholder:text-maroon/50 placeholder:font-body"
+                    aria-label="Phone Number"
+                  />
+                </div>
+              </InteractiveCard>
+            </ScrollReveal>
+
+            {/* Guest Count */}
+            <ScrollReveal delay={0.6}>
+              <InteractiveCard
+                className="rounded-lg"
+                tiltIntensity={4}
+                liftAmount={3}
+                glowColor="rgba(251,139,36,0.12)"
+              >
+                <div className="p-1">
+                  <label className="block mb-2">
+                    <span className="font-body text-sm text-gold-accessible">Number of Guests</span>
+                    <span className="font-hindi text-xs text-maroon/60 ml-2">/ मेहमानों की संख्या</span>
+                  </label>
+                  <div className="flex items-center border border-gold/35 rounded-lg overflow-hidden bg-white w-fit">
+                    <motion.button
+                      type="button"
+                      onClick={() => setGuestCount((c) => Math.max(1, c - 1))}
+                      whileTap={{ scale: 0.9 }}
+                      className="w-14 h-14 flex items-center justify-center text-2xl font-heading text-gold hover:bg-gold/10 active:bg-gold/15 transition-colors"
+                      aria-label="Decrease guest count"
+                    >
+                      −
+                    </motion.button>
+                    <div className="w-16 h-14 relative border-x border-gold/35 overflow-hidden">
+                      <AnimatePresence mode="popLayout">
+                        <motion.span
+                          key={guestCount}
+                          initial={{ scale: 1.4, opacity: 0 }}
+                          animate={{ scale: 1, opacity: 1 }}
+                          exit={{ scale: 0.6, opacity: 0 }}
+                          transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                          className="absolute inset-0 flex items-center justify-center font-heading text-xl text-maroon"
+                        >
+                          {guestCount}
+                        </motion.span>
+                      </AnimatePresence>
+                      <input
+                        type="number"
+                        value={guestCount}
+                        onChange={(e) => {
+                          const val = parseInt(e.target.value, 10)
+                          if (!isNaN(val) && val >= 1 && val <= 20) {
+                            setGuestCount(val)
+                          }
+                        }}
+                        min={1}
+                        max={20}
+                        className="w-full h-full text-center font-heading text-xl text-maroon bg-transparent outline-none opacity-0 absolute inset-0 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                        aria-label="Guest count"
+                      />
+                    </div>
+                    <motion.button
+                      type="button"
+                      onClick={() => setGuestCount((c) => Math.min(20, c + 1))}
+                      whileTap={{ scale: 0.9 }}
+                      className="w-14 h-14 flex items-center justify-center text-2xl font-heading text-gold hover:bg-gold/10 active:bg-gold/15 transition-colors"
+                      aria-label="Increase guest count"
+                    >
+                      +
+                    </motion.button>
+                  </div>
+                </div>
+              </InteractiveCard>
+            </ScrollReveal>
+          </div>
 
           {/* ─── Submit Button ─── */}
           <ScrollReveal delay={0.5}>
@@ -475,22 +516,29 @@ export function RsvpSection() {
             <p className="font-hindi text-sm text-maroon/60 mb-4">
               आपका साथ ही हमारा सबसे बड़ा उपहार है
             </p>
-            <Link
-              href="/gifts"
-              className="inline-flex items-center gap-2 px-8 py-3 rounded-lg border border-gold/30 text-gold-accessible font-heading tracking-wide hover:bg-gold/5 hover:border-gold/50 transition-all duration-300 group"
+            <InteractiveCard
+              className="inline-block rounded-lg"
+              tiltIntensity={5}
+              liftAmount={4}
+              glowColor="rgba(251,139,36,0.12)"
             >
-              <span>View Gift Wishes</span>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                className="group-hover:translate-x-1 transition-transform"
-                aria-hidden="true"
+              <Link
+                href="/gifts"
+                className="inline-flex items-center gap-2 px-8 py-3 rounded-lg border border-gold/30 text-gold-accessible font-heading tracking-wide hover:bg-gold/5 hover:border-gold/50 transition-all duration-300 group"
               >
-                <path d="M6 3l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </Link>
+                <span>View Gift Wishes</span>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  className="group-hover:translate-x-1 transition-transform"
+                  aria-hidden="true"
+                >
+                  <path d="M6 3l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </Link>
+            </InteractiveCard>
           </div>
         </ScrollReveal>
       </div>
