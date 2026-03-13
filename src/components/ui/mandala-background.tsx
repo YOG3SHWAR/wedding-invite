@@ -369,6 +369,7 @@ interface MandalaConfig {
   positionClass: string
   depthRate: number
   opacity: number
+  blur: number
 }
 
 const MANDALAS: MandalaConfig[] = [
@@ -376,22 +377,25 @@ const MANDALAS: MandalaConfig[] = [
     id: 'rings-top-right',
     Component: MandalaRings,
     positionClass: 'w-[300px] h-[300px] md:w-[800px] md:h-[800px] -top-10 -right-12 md:-top-32 md:-right-40',
-    depthRate: -0.04,
-    opacity: 0.35,
+    depthRate: -0.02,
+    opacity: 0.18,
+    blur: 1.5,
   },
   {
     id: 'geometric-bottom-left',
     Component: MandalaGeometric,
     positionClass: 'w-[250px] h-[250px] md:w-[700px] md:h-[700px] top-[30vh] -left-10 md:top-[25vh] md:-left-32',
-    depthRate: -0.065,
-    opacity: 0.3,
+    depthRate: -0.05,
+    opacity: 0.28,
+    blur: 0.5,
   },
   {
     id: 'lotus-bottom-right',
     Component: MandalaLotus,
     positionClass: 'w-[220px] h-[220px] md:w-[620px] md:h-[620px] -bottom-8 -right-8 md:-bottom-24 md:-right-28',
-    depthRate: -0.08,
-    opacity: 0.35,
+    depthRate: -0.10,
+    opacity: 0.40,
+    blur: 0,
   },
 ]
 
@@ -442,13 +446,14 @@ export function MandalaBackground() {
       className="fixed inset-0 z-[1] pointer-events-none overflow-hidden"
       aria-hidden="true"
     >
-      {MANDALAS.map(({ id, Component, positionClass, depthRate, opacity }) => (
+      {MANDALAS.map(({ id, Component, positionClass, depthRate, opacity, blur }) => (
         <div
           key={id}
           className={`absolute ${positionClass}`}
           style={{
             opacity,
             transform: `translateY(${scrollY * depthRate}px)`,
+            filter: blur > 0 ? `blur(${blur}px)` : undefined,
             willChange: 'transform',
           }}
         >
