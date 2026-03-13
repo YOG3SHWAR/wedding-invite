@@ -45,7 +45,7 @@ export function RsvpConfirmation({
   )
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-16 bg-cream relative overflow-hidden">
+    <div className="min-h-screen bg-cream flex flex-col items-center justify-center px-4 py-16 relative overflow-hidden">
       {/* ─── Thank You Header ─── */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}

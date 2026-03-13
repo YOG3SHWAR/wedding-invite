@@ -9,7 +9,7 @@ export function VideoSection() {
   const [playing, setPlaying] = useState(false)
 
   return (
-    <section className="py-section-mobile md:py-section px-4 bg-cream-dark">
+    <section className="bg-cream-dark py-section-mobile md:py-section px-4">
       <div className="max-w-4xl mx-auto">
         {/* Section heading */}
         <div className="text-center mb-12 md:mb-16">

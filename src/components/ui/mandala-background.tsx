@@ -378,7 +378,7 @@ const MANDALAS: MandalaConfig[] = [
     Component: MandalaRings,
     positionClass: 'w-[300px] h-[300px] md:w-[800px] md:h-[800px] -top-10 -right-12 md:-top-32 md:-right-40',
     depthRate: -0.02,
-    opacity: 0.18,
+    opacity: 0.06,
     blur: 1.5,
   },
   {
@@ -386,7 +386,7 @@ const MANDALAS: MandalaConfig[] = [
     Component: MandalaGeometric,
     positionClass: 'w-[250px] h-[250px] md:w-[700px] md:h-[700px] top-[30vh] -left-10 md:top-[25vh] md:-left-32',
     depthRate: -0.05,
-    opacity: 0.28,
+    opacity: 0.10,
     blur: 0.5,
   },
   {
@@ -394,7 +394,7 @@ const MANDALAS: MandalaConfig[] = [
     Component: MandalaLotus,
     positionClass: 'w-[220px] h-[220px] md:w-[620px] md:h-[620px] -bottom-8 -right-8 md:-bottom-24 md:-right-28',
     depthRate: -0.10,
-    opacity: 0.40,
+    opacity: 0.12,
     blur: 0,
   },
 ]
@@ -443,7 +443,7 @@ export function MandalaBackground() {
 
   return (
     <div
-      className="fixed inset-0 z-[1] pointer-events-none overflow-hidden"
+      className="fixed inset-0 z-[10] pointer-events-none overflow-hidden"
       aria-hidden="true"
     >
       {MANDALAS.map(({ id, Component, positionClass, depthRate, opacity, blur }) => (
