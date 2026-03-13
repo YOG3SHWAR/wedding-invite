@@ -64,7 +64,7 @@ export function StoryMilestone({
       {/* Circular image placeholder */}
       <div className="hidden md:block flex-1">
         <div
-          className={`w-28 h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden border-3 border-gold/60 shadow-lg ${
+          className={`w-28 h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden border-3 border-gold/60 shadow-lg transition-all duration-500 ease-out hover:scale-110 hover:border-gold hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] group ${
             isLeft ? '' : 'md:ml-auto'
           }`}
         >
@@ -72,7 +72,7 @@ export function StoryMilestone({
           <img
             src={imageSrc}
             alt={title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
             loading="lazy"
           />
         </div>

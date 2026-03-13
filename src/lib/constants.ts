@@ -189,11 +189,11 @@ export const STORY_MILESTONES = [
   },
   {
     id: 'the-proposal',
-    title: 'The Proposal',
-    titleHindi: 'प्रस्ताव',
+    title: 'Our Dream Takes Shape',
+    titleHindi: 'सपना साकार होता है',
     year: '2024',
     description:
-      'One question, one answer, infinite joy. The beginning of our forever journey together.',
+      'From stolen glances to shared dreams — planning a future together, one beautiful step at a time.',
     imageKey: 'the-proposal',
   },
   {
