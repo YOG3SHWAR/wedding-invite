@@ -42,7 +42,7 @@ export const EVENTS = [
     name: 'Tilak',
     nameHindi: 'तिलक',
     date: '26 April 2026',
-    time: '10:00 AM', // placeholder
+    time: '7:00 PM',
     venue: 'Agrasen Dham, Kotma',
     mapUrl: 'https://maps.app.goo.gl/uK27iNcTgJBssRb19',
     dressCode: 'Traditional / Kurta Pajama',
@@ -54,7 +54,7 @@ export const EVENTS = [
     name: 'Mehndi',
     nameHindi: 'मेहंदी',
     date: '27 April 2026',
-    time: '4:00 PM', // placeholder
+    time: '4:00 PM',
     venue: 'Shreyash Resort',
     mapUrl: 'https://maps.app.goo.gl/3cfPmTPmurVXm3Sw7',
     dressCode: 'Colorful / Lehenga or Saree',
@@ -66,7 +66,7 @@ export const EVENTS = [
     name: 'Sangeet',
     nameHindi: 'संगीत',
     date: '27 April 2026',
-    time: '7:00 PM', // placeholder
+    time: '7:00 PM',
     venue: 'Shreyash Resort',
     mapUrl: 'https://maps.app.goo.gl/3cfPmTPmurVXm3Sw7',
     dressCode: 'Glamorous / Party Wear',
@@ -78,7 +78,7 @@ export const EVENTS = [
     name: 'Haldi',
     nameHindi: 'हल्दी',
     date: '28 April 2026',
-    time: '9:00 AM', // placeholder
+    time: '10:00 AM',
     venue: 'Shreyash Resort',
     mapUrl: 'https://maps.app.goo.gl/3cfPmTPmurVXm3Sw7',
     dressCode: 'Yellow / Casual Indian',
@@ -90,7 +90,7 @@ export const EVENTS = [
     name: 'Shadi',
     nameHindi: 'शादी',
     date: '28 April 2026',
-    time: '7:00 PM', // placeholder
+    time: '7:00 PM',
     venue: 'Shreyash Resort',
     mapUrl: 'https://maps.app.goo.gl/3cfPmTPmurVXm3Sw7',
     dressCode: 'Grand / Sherwani or Saree',

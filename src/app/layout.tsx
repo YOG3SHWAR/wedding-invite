@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react'
 import { yatraOne, playfairDisplay, cormorantGaramond } from '@/lib/fonts'
 import { AnimationProvider } from '@/components/providers/animation-provider'
 import { GoldParticleCanvas } from '@/components/ui/gold-particle-canvas'
@@ -38,6 +39,7 @@ export default function RootLayout({
         <MandalaBackground />
         <GoldParticleCanvas />
         <AnimationProvider>{children}</AnimationProvider>
+        <Analytics />
       </body>
     </html>
   )
