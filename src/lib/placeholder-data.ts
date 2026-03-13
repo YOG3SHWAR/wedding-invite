@@ -17,6 +17,16 @@ export const PLACEHOLDER_GALLERY = [
   { id: 'g10', src: '/images/gallery/photo-10.jpg', alt: 'Yogi & Sudha — family at car delivery', width: 1280, height: 960 },
   { id: 'g11', src: '/images/gallery/photo-11.jpg', alt: 'Yogi & Sudha — engagement portrait', width: 853, height: 1280 },
   { id: 'g12', src: '/images/gallery/photo-12.jpg', alt: 'Yogi & Sudha — ring ceremony', width: 1280, height: 853 },
+  { id: 'g13', src: '/images/gallery/photo-13.jpg', alt: 'Yogi & Sudha — celebration portrait', width: 3024, height: 4032 },
+  { id: 'g14', src: '/images/gallery/photo-14.jpg', alt: 'Yogi & Sudha — together outdoors', width: 4032, height: 3024 },
+  { id: 'g15', src: '/images/gallery/photo-15.jpg', alt: 'Yogi & Sudha — candid laughter', width: 4032, height: 3024 },
+  { id: 'g16', src: '/images/gallery/photo-16.jpg', alt: 'Yogi & Sudha — festive moment', width: 3120, height: 4160 },
+  { id: 'g17', src: '/images/gallery/photo-17.jpg', alt: 'Yogi & Sudha — close portrait', width: 2774, height: 4160 },
+  { id: 'g18', src: '/images/gallery/photo-18.jpg', alt: 'Yogi & Sudha — dressed for occasion', width: 3120, height: 4160 },
+  { id: 'g19', src: '/images/gallery/photo-19.jpg', alt: 'Yogi & Sudha — scenic backdrop', width: 4032, height: 3024 },
+  { id: 'g20', src: '/images/gallery/photo-20.jpg', alt: 'Yogi & Sudha — joyful together', width: 4160, height: 3120 },
+  { id: 'g21', src: '/images/gallery/photo-21.jpg', alt: 'Yogi & Sudha — special day', width: 2316, height: 3088 },
+  { id: 'g22', src: '/images/gallery/photo-22.jpg', alt: 'Yogi & Sudha — cherished memory', width: 1179, height: 2098 },
 ] as const
 
 /** Placeholder video thumbnail and embed URL */
