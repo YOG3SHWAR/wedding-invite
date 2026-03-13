@@ -7,8 +7,8 @@
  * [ ] EVENTS[*].mapUrl -- Real Google Maps links
  * [ ] STORY_MILESTONES[*].description -- Real relationship milestones
  * [ ] GIFT_ITEMS[*].buyUrl -- Real purchase links (or remove section)
- * [ ] public/images/og-couple.jpg -- Real couple photo for WhatsApp preview
- * [ ] Gallery photos -- Replace placeholder SVGs with real photos
+ * [x] public/images/og-couple.jpg -- Real couple photo for WhatsApp preview
+ * [x] Gallery photos -- Replace placeholder SVGs with real photos
  * [ ] Video -- Replace placeholder with real pre-wedding video URL
  */
 
