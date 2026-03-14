@@ -39,9 +39,6 @@ export const metadata: Metadata = {
     description: 'Join us for our wedding celebration! 28 April 2026',
     images: ['/images/og-image.jpg'],
   },
-  other: {
-    'theme-color': '#800020',
-  },
 }
 
 export default function RootLayout({
