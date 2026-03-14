@@ -164,7 +164,7 @@ export const STORY_MILESTONES = [
     id: 'how-we-met',
     title: 'How We Met',
     titleHindi: 'हम कैसे मिले',
-    year: '2020',
+    year: '2022',
     description:
       'Two paths crossed and the universe smiled. A chance meeting that would change everything forever.',
     imageKey: 'how-we-met',
@@ -173,7 +173,7 @@ export const STORY_MILESTONES = [
     id: 'first-adventure',
     title: 'First Adventure Together',
     titleHindi: 'पहला साहस साथ में',
-    year: '2021',
+    year: '2022',
     description:
       'Our first journey together — exploring new places, sharing laughter, and discovering how perfectly our worlds fit together.',
     imageKey: 'first-adventure',
@@ -182,7 +182,7 @@ export const STORY_MILESTONES = [
     id: 'the-moment',
     title: 'The Moment We Knew',
     titleHindi: 'वो खास पल',
-    year: '2022',
+    year: '2023',
     description:
       'Sometimes you just know. A quiet moment when we looked at each other and realized this was forever.',
     imageKey: 'the-moment',
