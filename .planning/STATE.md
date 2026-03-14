@@ -59,9 +59,10 @@ Open items for content population (pre-launch):
 | 1 | Add dramatic interactive cursor/tap-based background effects | 2026-03-12 | bcb40a7 | Needs Review | [1-add-dramatic-interactive-cursor-tap-base](./quick/1-add-dramatic-interactive-cursor-tap-base/) |
 | 2 | Gallery page takes a lot of time to load and tapping photos doesnt open them, tapping on text does | 2026-03-14 | a467235 | Needs Review | [2-gallery-page-takes-a-lot-of-time-to-load](./quick/2-gallery-page-takes-a-lot-of-time-to-load/) |
 | 3 | SEO optimization: sitemap, robots, manifest, JSON-LD, OG metadata | 2026-03-14 | e69bf9c | Verified | [3-i-want-to-optimise-seo-for-this-website](./quick/3-i-want-to-optimise-seo-for-this-website/) |
+| 4 | Fix RSVP day selection bug: 1-based to 0-based indexing | 2026-03-14 | 75fdddf | Needs Review | [4-rsvp-bug-selecting-all-3-days-only-saves](./quick/4-rsvp-bug-selecting-all-3-days-only-saves/) |
 
 ## Session Continuity
 
 Last session: 2026-03-14
-Last activity: 2026-03-14 - Completed quick task 3: SEO optimization with sitemap, robots, manifest, JSON-LD, and OG metadata
+Last activity: 2026-03-14 - Completed quick task 4: Fix RSVP day selection bug (1-based to 0-based indexing)
 Resume: Start next milestone with `/gsd:new-milestone`
