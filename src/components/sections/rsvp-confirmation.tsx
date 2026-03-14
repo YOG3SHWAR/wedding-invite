@@ -37,7 +37,7 @@ export function RsvpConfirmation({
   }, [])
 
   const selectedDayData = RSVP_DAYS.filter((_, index) =>
-    selectedDays.includes(index + 1)
+    selectedDays.includes(index)
   )
 
   const shareText = encodeURIComponent(

@@ -79,7 +79,7 @@ export function RsvpSection() {
     if (allSelected) {
       setSelectedDays(new Set())
     } else {
-      setSelectedDays(new Set(RSVP_DAYS.map((_, i) => i + 1)))
+      setSelectedDays(new Set(RSVP_DAYS.map((_, i) => i)))
     }
   }
 
@@ -212,7 +212,7 @@ export function RsvpSection() {
           {/* ─── Day Cards ─── */}
           <div className="space-y-5 mb-10">
             {RSVP_DAYS.map((day, index) => {
-              const dayNumber = index + 1
+              const dayNumber = index
               const isSelected = selectedDays.has(dayNumber)
               const accentColor = EVENT_COLORS[day.colorKey]
               const eventNames = day.events.map((e) => e).join(' & ')
