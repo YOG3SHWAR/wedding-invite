@@ -12,6 +12,7 @@ import { StoryMilestone } from './story-milestone'
 export function OurStorySection() {
   return (
     <section
+      id="our-story"
       className="py-section-mobile md:py-section px-4 relative"
       style={{
         backgroundImage:

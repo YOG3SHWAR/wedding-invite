@@ -3,6 +3,7 @@
 import { motion } from 'motion/react'
 import { COUPLE, WEDDING_TARGET_DATE } from '@/lib/constants'
 import { InteractiveCard } from '@/components/ui/interactive-card'
+import { ScrollNudge } from '@/components/ui/scroll-nudge'
 import { HeroCountdown } from './hero-countdown'
 
 /**
@@ -122,29 +123,10 @@ export function HeroSection() {
           </div>
         </InteractiveCard>
 
-        {/* Scroll indicator — animated gold chevron */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2.0 }}
-          className="flex justify-center mt-8"
-        >
-          <motion.svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="text-gold/60 animate-bounce"
-            aria-hidden="true"
-          >
-            <polyline points="6 9 12 15 18 9" />
-          </motion.svg>
-        </motion.div>
       </div>
+
+      {/* Scroll nudge — prominent, auto-hiding */}
+      <ScrollNudge />
     </section>
   )
 }
