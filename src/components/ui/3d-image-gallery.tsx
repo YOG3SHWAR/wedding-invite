@@ -248,7 +248,6 @@ function FloatingCard({
             src={card.thumbnail || card.imageUrl}
             alt={card.alt}
             className="w-full h-44 object-cover rounded-md"
-            loading="lazy"
             draggable={false}
           />
           <div className="mt-1 text-center">
@@ -476,7 +475,7 @@ function ImagePreloader({ onReady }: { onReady?: () => void }) {
           const img = new Image()
           img.onload = () => resolve()
           img.onerror = () => resolve() // resolve on error to prevent hanging
-          img.src = card.thumbnail || card.imageUrl
+          img.src = card.imageUrl
         })
     )
 

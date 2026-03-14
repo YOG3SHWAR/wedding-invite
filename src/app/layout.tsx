@@ -8,7 +8,7 @@ import { WeddingJsonLd } from '@/components/seo/json-ld'
 import './globals.css'
 
 export const viewport: Viewport = {
-  themeColor: '#FFF8F0',
+  themeColor: '#2D0620',
   viewportFit: 'cover',
 }
 
