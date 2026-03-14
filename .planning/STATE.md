@@ -5,7 +5,7 @@ milestone_name: Yogi Wedding Invite
 status: shipped
 stopped_at: v1.0 milestone archived
 last_updated: "2026-03-12T08:30:00.000Z"
-last_activity: 2026-03-14 - Completed quick task 4: RSVP bug: selecting all 3 days only saves day 2 and 3, day 1 is lost
+last_activity: 2026-03-14 - Completed quick task 5: Fix broken lightbox images in home page gallery
 progress:
   total_phases: 4
   completed_phases: 4
@@ -60,9 +60,10 @@ Open items for content population (pre-launch):
 | 2 | Gallery page takes a lot of time to load and tapping photos doesnt open them, tapping on text does | 2026-03-14 | a467235 | Needs Review | [2-gallery-page-takes-a-lot-of-time-to-load](./quick/2-gallery-page-takes-a-lot-of-time-to-load/) |
 | 3 | SEO optimization: sitemap, robots, manifest, JSON-LD, OG metadata | 2026-03-14 | e69bf9c | Verified | [3-i-want-to-optimise-seo-for-this-website](./quick/3-i-want-to-optimise-seo-for-this-website/) |
 | 4 | Fix RSVP day selection bug: 1-based to 0-based indexing | 2026-03-14 | 75fdddf | Needs Review | [4-rsvp-bug-selecting-all-3-days-only-saves](./quick/4-rsvp-bug-selecting-all-3-days-only-saves/) |
+| 5 | Fix broken lightbox images in home page gallery | 2026-03-14 | e890cef | Needs Review | [5-opening-an-image-from-home-page-photos-i](./quick/5-opening-an-image-from-home-page-photos-i/) |
 
 ## Session Continuity
 
 Last session: 2026-03-14
-Last activity: 2026-03-14 - Completed quick task 4: Fix RSVP day selection bug (1-based to 0-based indexing)
+Last activity: 2026-03-14 - Completed quick task 5: Fix broken lightbox images in home page gallery
 Resume: Start next milestone with `/gsd:new-milestone`
