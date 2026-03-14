@@ -18,7 +18,7 @@ export function PhotoGallery() {
   const previewPhotos = PLACEHOLDER_GALLERY.slice(0, GALLERY_PREVIEW_COUNT)
 
   const slides = previewPhotos.map((img) => ({
-    src: `/_next/image?url=${encodeURIComponent(img.src)}&w=1200&q=85`,
+    src: img.src,
     alt: img.alt,
     width: img.width,
     height: img.height,
