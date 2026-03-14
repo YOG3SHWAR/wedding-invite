@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import { yatraOne, playfairDisplay, cormorantGaramond } from '@/lib/fonts'
 import { AnimationProvider } from '@/components/providers/animation-provider'
@@ -6,6 +6,11 @@ import { GoldParticleCanvas } from '@/components/ui/gold-particle-canvas'
 import { MandalaBackground } from '@/components/ui/mandala-background'
 import { WeddingJsonLd } from '@/components/seo/json-ld'
 import './globals.css'
+
+export const viewport: Viewport = {
+  themeColor: '#FFF8F0',
+  viewportFit: 'cover',
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),

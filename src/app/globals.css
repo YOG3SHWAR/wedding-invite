@@ -49,6 +49,10 @@ body {
   font-family: var(--font-body), 'Georgia', serif;
   background-color: var(--color-cream);
   color: var(--color-maroon-dark);
+  padding-top: env(safe-area-inset-top);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* Morph loading animation keyframes */
