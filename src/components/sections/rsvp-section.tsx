@@ -8,7 +8,6 @@ import { preloadFirebase } from '@/lib/firebase-lazy'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
 import { InteractiveCard } from '@/components/ui/interactive-card'
 import { RsvpConfirmation } from '@/components/sections/rsvp-confirmation'
-import Link from 'next/link'
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error'
 
@@ -507,40 +506,7 @@ export function RsvpSection() {
           </AnimatePresence>
         </form>
 
-        {/* ─── Gift Registry Link ─── */}
-        <ScrollReveal delay={0.6}>
-          <div className="mt-16 text-center">
-            <p className="font-body text-base text-maroon/70 mb-1">
-              Your presence is our greatest gift
-            </p>
-            <p className="font-hindi text-sm text-maroon/60 mb-4">
-              आपका साथ ही हमारा सबसे बड़ा उपहार है
-            </p>
-            <InteractiveCard
-              className="inline-block rounded-lg"
-              tiltIntensity={5}
-              liftAmount={4}
-              glowColor="rgba(251,139,36,0.12)"
-            >
-              <Link
-                href="/gifts"
-                className="inline-flex items-center gap-2 px-8 py-3 rounded-lg border border-gold/30 text-gold-accessible font-heading tracking-wide hover:bg-gold/5 hover:border-gold/50 transition-all duration-300 group"
-              >
-                <span>View Gift Wishes</span>
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  className="group-hover:translate-x-1 transition-transform"
-                  aria-hidden="true"
-                >
-                  <path d="M6 3l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </Link>
-            </InteractiveCard>
-          </div>
-        </ScrollReveal>
+        {/* Gift section disabled for now */}
       </div>
     </section>
   )

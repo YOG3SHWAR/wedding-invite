@@ -6,7 +6,6 @@
 /** Gallery images with real aspect ratios */
 export const PLACEHOLDER_GALLERY = [
   { id: 'g1', src: '/images/gallery/photo-01.jpg', alt: 'Yogi & Sudha — outdoor selfie', width: 960, height: 1280 },
-  { id: 'g2', src: '/images/gallery/photo-02.jpg', alt: 'Yogi & Sudha — sunset with mountains', width: 959, height: 1280 },
   { id: 'g3', src: '/images/gallery/photo-03.jpg', alt: 'Yogi & Sudha — matching tees at restaurant', width: 1280, height: 960 },
   { id: 'g4', src: '/images/gallery/photo-04.jpg', alt: 'Yogi & Sudha — fun selfie at hillstation', width: 1280, height: 960 },
   { id: 'g5', src: '/images/gallery/photo-05.jpg', alt: 'Yogi & Sudha — adventure at cave', width: 960, height: 1280 },
@@ -29,10 +28,10 @@ export const PLACEHOLDER_GALLERY = [
   { id: 'g22', src: '/images/gallery/photo-22.jpg', alt: 'Yogi & Sudha — cherished memory', width: 1179, height: 2098 },
 ] as const
 
-/** Placeholder video thumbnail and embed URL */
+/** Video thumbnail and embed URL */
 export const PLACEHOLDER_VIDEO = {
-  thumbnailSrc: '/images/gallery/photo-02.jpg',
-  videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // placeholder — replace with real pre-wedding video
+  thumbnailSrc: '/images/gallery/photo-03.jpg',
+  videoUrl: 'https://www.youtube.com/embed/9VVbnddNxHc',
 } as const
 
 /** Story photos mapped by milestone imageKey */

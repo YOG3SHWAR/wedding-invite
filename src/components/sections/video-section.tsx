@@ -22,7 +22,7 @@ export function VideoSection() {
         {/* Video container with gold frame */}
         <ScrollReveal variant="fadeUp">
           <InteractiveCard className="border border-gold/60 rounded-xl p-1" tiltIntensity={6} liftAmount={5}>
-            <div className="aspect-video max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg">
+            <div className="aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg">
               {!playing ? (
                 <button
                   type="button"
