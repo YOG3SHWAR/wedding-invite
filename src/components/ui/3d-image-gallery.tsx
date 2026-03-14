@@ -15,7 +15,6 @@ import {
   OrbitControls,
   Environment,
   Html,
-  Plane,
   Sphere,
 } from "@react-three/drei"
 import { X, ArrowLeft } from "lucide-react"
@@ -29,6 +28,7 @@ import { PLACEHOLDER_GALLERY } from "@/lib/placeholder-data"
 type Card = {
   id: string
   imageUrl: string
+  thumbnail: string
   alt: string
   title: string
 }
@@ -53,6 +53,7 @@ function CardProvider({ children }: { children: React.ReactNode }) {
   const cards: Card[] = PLACEHOLDER_GALLERY.map((img) => ({
     id: img.id,
     imageUrl: img.src,
+    thumbnail: img.thumbnail,
     alt: img.alt,
     title: img.alt,
   }))
@@ -89,7 +90,7 @@ function StarfieldBackground() {
 
     // Gold-tinted stars
     const starsGeometry = new THREE.BufferGeometry()
-    const starsCount = 8000
+    const starsCount = 2000
     const positions = new Float32Array(starsCount * 3)
     const colors = new Float32Array(starsCount * 3)
 
@@ -198,19 +199,16 @@ function FloatingCard({
     }
   })
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleClick = (e: any) => {
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation()
     setSelectedCard(card)
   }
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handlePointerOver = (e: any) => {
+  const handlePointerOver = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation()
     setHovered(true)
     document.body.style.cursor = "pointer"
   }
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handlePointerOut = (e: any) => {
+  const handlePointerOut = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation()
     setHovered(false)
     document.body.style.cursor = "auto"
@@ -218,15 +216,6 @@ function FloatingCard({
 
   return (
     <group ref={groupRef} position={[position.x, position.y, position.z]}>
-      <Plane
-        args={[4.5, 6]}
-        onClick={handleClick}
-        onPointerOver={handlePointerOver}
-        onPointerOut={handlePointerOut}
-      >
-        <meshBasicMaterial transparent opacity={0} />
-      </Plane>
-
       <Html
         transform
         distanceFactor={10}
@@ -234,12 +223,16 @@ function FloatingCard({
         style={{
           transition: "all 0.3s ease",
           transform: hovered ? "scale(1.15)" : "scale(1)",
-          pointerEvents: "none",
+          pointerEvents: "auto",
         }}
       >
         <div
           className="w-40 h-52 rounded-lg overflow-hidden p-2.5 select-none"
+          onClick={handleClick}
+          onMouseOver={handlePointerOver}
+          onMouseOut={handlePointerOut}
           style={{
+            cursor: "pointer",
             background: hovered
               ? "linear-gradient(145deg, #1a0810, #2a1018)"
               : "linear-gradient(145deg, #140610, #1a0810)",
@@ -252,7 +245,7 @@ function FloatingCard({
           }}
         >
           <img
-            src={card.imageUrl}
+            src={card.thumbnail || card.imageUrl}
             alt={card.alt}
             className="w-full h-44 object-cover rounded-md"
             loading="lazy"
@@ -350,7 +343,7 @@ function CardModal() {
                 loading="lazy"
                 className="absolute inset-0 h-full w-full rounded-xl object-cover"
                 alt={selectedCard.alt}
-                src={selectedCard.imageUrl}
+                src={`/_next/image?url=${encodeURIComponent(selectedCard.imageUrl)}&w=828&q=85`}
                 style={{
                   boxShadow: "0 5px 20px rgba(0, 0, 0, 0.3)",
                 }}
