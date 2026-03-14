@@ -57,9 +57,10 @@ Open items for content population (pre-launch):
 | # | Description | Date | Commit | Status | Directory |
 |---|-------------|------|--------|--------|-----------|
 | 1 | Add dramatic interactive cursor/tap-based background effects | 2026-03-12 | bcb40a7 | Needs Review | [1-add-dramatic-interactive-cursor-tap-base](./quick/1-add-dramatic-interactive-cursor-tap-base/) |
+| 2 | Gallery page takes a lot of time to load and tapping photos doesnt open them, tapping on text does | 2026-03-14 | a467235 | Needs Review | [2-gallery-page-takes-a-lot-of-time-to-load](./quick/2-gallery-page-takes-a-lot-of-time-to-load/) |
 
 ## Session Continuity
 
 Last session: 2026-03-12
-Last activity: 2026-03-12 - Completed quick task 1: Add dramatic interactive cursor/tap-based background effects
+Last activity: 2026-03-14 - Completed quick task 2: Gallery page takes a lot of time to load and tapping photos doesnt open them, tapping on text does
 Resume: Start next milestone with `/gsd:new-milestone`
