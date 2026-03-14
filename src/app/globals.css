@@ -50,3 +50,29 @@ body {
   background-color: var(--color-cream);
   color: var(--color-maroon-dark);
 }
+
+/* Morph loading animation keyframes */
+@keyframes morph-0 {
+  0%, 100% { border-radius: 0; transform: translate(0, 0); }
+  25% { border-radius: 50%; transform: translate(100%, 0); }
+  50% { border-radius: 0; transform: translate(100%, 100%); }
+  75% { border-radius: 50%; transform: translate(0, 100%); }
+}
+@keyframes morph-1 {
+  0%, 100% { border-radius: 0; transform: translate(0, 0); }
+  25% { border-radius: 50%; transform: translate(-100%, 0); }
+  50% { border-radius: 0; transform: translate(-100%, -100%); }
+  75% { border-radius: 50%; transform: translate(0, -100%); }
+}
+@keyframes morph-2 {
+  0%, 100% { border-radius: 0; transform: translate(0, 0); }
+  25% { border-radius: 50%; transform: translate(0, 100%); }
+  50% { border-radius: 0; transform: translate(-100%, 100%); }
+  75% { border-radius: 50%; transform: translate(-100%, 0); }
+}
+@keyframes morph-3 {
+  0%, 100% { border-radius: 0; transform: translate(0, 0); }
+  25% { border-radius: 50%; transform: translate(0, -100%); }
+  50% { border-radius: 0; transform: translate(100%, -100%); }
+  75% { border-radius: 50%; transform: translate(100%, 0); }
+}
