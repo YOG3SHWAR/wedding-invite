@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Lightbox from 'yet-another-react-lightbox'
 import 'yet-another-react-lightbox/styles.css'
 import { PLACEHOLDER_GALLERY } from '@/lib/placeholder-data'
@@ -17,7 +18,7 @@ export function PhotoGallery() {
   const previewPhotos = PLACEHOLDER_GALLERY.slice(0, GALLERY_PREVIEW_COUNT)
 
   const slides = previewPhotos.map((img) => ({
-    src: img.src,
+    src: `/_next/image?url=${encodeURIComponent(img.src)}&w=1200&q=85`,
     alt: img.alt,
     width: img.width,
     height: img.height,
@@ -53,13 +54,14 @@ export function PhotoGallery() {
                   className="block w-full"
                   aria-label={`View ${img.alt}`}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src={img.src}
                     alt={img.alt}
                     width={img.width}
                     height={img.height}
                     loading="lazy"
+                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    quality={75}
                     className="w-full h-auto"
                   />
                 </button>
