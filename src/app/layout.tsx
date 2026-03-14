@@ -4,12 +4,17 @@ import { yatraOne, playfairDisplay, cormorantGaramond } from '@/lib/fonts'
 import { AnimationProvider } from '@/components/providers/animation-provider'
 import { GoldParticleCanvas } from '@/components/ui/gold-particle-canvas'
 import { MandalaBackground } from '@/components/ui/mandala-background'
+import { WeddingJsonLd } from '@/components/seo/json-ld'
 import './globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: "Yogi & Sudha's Wedding",
   description: 'Join us for our wedding celebration! 28 April 2026',
+  keywords: ['wedding', 'Yogi and Sudha', 'wedding invitation', 'Indian wedding', 'April 2026'],
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-icon.jpg',
@@ -34,6 +39,9 @@ export const metadata: Metadata = {
     description: 'Join us for our wedding celebration! 28 April 2026',
     images: ['/images/og-image.jpg'],
   },
+  other: {
+    'theme-color': '#800020',
+  },
 }
 
 export default function RootLayout({
@@ -47,6 +55,7 @@ export default function RootLayout({
       className={`${yatraOne.variable} ${playfairDisplay.variable} ${cormorantGaramond.variable}`}
     >
       <body className="bg-cream text-maroon-dark font-body antialiased">
+        <WeddingJsonLd />
         <MandalaBackground />
         <GoldParticleCanvas />
         <AnimationProvider>{children}</AnimationProvider>
