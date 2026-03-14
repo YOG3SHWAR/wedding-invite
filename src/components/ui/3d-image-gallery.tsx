@@ -489,9 +489,18 @@ function ImagePreloader({ onReady }: { onReady?: () => void }) {
 }
 
 export default function StellarCardGallery({ onReady }: { onReady?: () => void }) {
+  const [canvasReady, setCanvasReady] = useState(false)
+  const [imagesReady, setImagesReady] = useState(false)
+
+  useEffect(() => {
+    if (canvasReady && imagesReady) {
+      onReady?.()
+    }
+  }, [canvasReady, imagesReady, onReady])
+
   return (
     <CardProvider>
-      <ImagePreloader onReady={onReady} />
+      <ImagePreloader onReady={() => setImagesReady(true)} />
       <div
         className="w-full h-screen relative overflow-hidden"
         style={{ backgroundColor: "#0a0006" }}
@@ -503,6 +512,9 @@ export default function StellarCardGallery({ onReady }: { onReady?: () => void }
           className="absolute inset-0 z-10"
           onCreated={({ gl }) => {
             gl.domElement.style.pointerEvents = "auto"
+            requestAnimationFrame(() => {
+              setCanvasReady(true)
+            })
           }}
         >
           <Suspense fallback={null}>

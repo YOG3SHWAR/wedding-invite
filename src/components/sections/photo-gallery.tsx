@@ -7,7 +7,6 @@ import Lightbox from 'yet-another-react-lightbox'
 import 'yet-another-react-lightbox/styles.css'
 import { PLACEHOLDER_GALLERY } from '@/lib/placeholder-data'
 import { StaggerReveal, StaggerItem } from '@/components/ui/stagger-reveal'
-import { InteractiveCard } from '@/components/ui/interactive-card'
 
 const GALLERY_PREVIEW_COUNT = 12
 
@@ -40,11 +39,7 @@ export function PhotoGallery() {
         <StaggerReveal className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
           {previewPhotos.map((img, i) => (
             <StaggerItem key={img.id} className="break-inside-avoid">
-              <InteractiveCard
-                className="block w-full rounded-lg overflow-hidden border border-gold/50 hover:border-gold/70 shadow-md cursor-pointer"
-                tiltIntensity={8}
-                liftAmount={6}
-              >
+              <div className="block w-full rounded-lg overflow-hidden border border-gold/50 hover:border-gold/70 shadow-md cursor-pointer transition-shadow duration-200 hover:shadow-lg">
                 <button
                   type="button"
                   onClick={() => {
@@ -65,7 +60,7 @@ export function PhotoGallery() {
                     className="w-full h-auto"
                   />
                 </button>
-              </InteractiveCard>
+              </div>
             </StaggerItem>
           ))}
         </StaggerReveal>
