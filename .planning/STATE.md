@@ -5,7 +5,7 @@ milestone_name: Yogi Wedding Invite
 status: shipped
 stopped_at: v1.0 milestone archived
 last_updated: "2026-03-12T08:30:00.000Z"
-last_activity: 2026-03-14 - Completed quick task 3: i want to optimise seo for this website
+last_activity: 2026-03-14 - Completed quick task 4: RSVP bug: selecting all 3 days only saves day 2 and 3, day 1 is lost
 progress:
   total_phases: 4
   completed_phases: 4
