@@ -1,17 +1,27 @@
-import type { Metadata } from "next"
-import StellarCardGallery from "@/components/ui/3d-image-gallery"
+"use client"
 
-export const metadata: Metadata = {
-  title: "Photo Gallery — Yogi & Sudha's Wedding",
-  description: "Explore our moments together in an immersive 3D gallery",
-  openGraph: {
-    title: "Photo Gallery — Yogi & Sudha's Wedding",
-    description: "Explore our moments together in an immersive 3D gallery",
-    type: 'website',
-    images: [{ url: '/images/og-image.jpg' }],
-  },
-}
+import { useState } from "react"
+import StellarCardGallery from "@/components/ui/3d-image-gallery"
+import { MorphLoading } from "@/components/ui/morph-loading"
 
 export default function GalleryPage() {
-  return <StellarCardGallery />
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  return (
+    <div className="relative w-full h-screen">
+      {/* Loading overlay */}
+      {!isLoaded && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center"
+          style={{ backgroundColor: '#FFF8F0' }}
+        >
+          <MorphLoading variant="morph" size="lg" />
+        </div>
+      )}
+      {/* Gallery always mounted (so Three.js can load textures) */}
+      <div style={{ opacity: isLoaded ? 1 : 0, transition: 'opacity 0.6s ease-in-out' }}>
+        <StellarCardGallery onReady={() => setIsLoaded(true)} />
+      </div>
+    </div>
+  )
 }

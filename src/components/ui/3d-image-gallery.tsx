@@ -457,9 +457,41 @@ function CardGalaxy() {
    Page Export
    ========================= */
 
-export default function StellarCardGallery() {
+/* =========================
+   Image Preloader
+   ========================= */
+
+function ImagePreloader({ onReady }: { onReady?: () => void }) {
+  const { cards } = useCard()
+
+  useEffect(() => {
+    if (cards.length === 0) {
+      onReady?.()
+      return
+    }
+
+    const promises = cards.map(
+      (card) =>
+        new Promise<void>((resolve) => {
+          const img = new Image()
+          img.onload = () => resolve()
+          img.onerror = () => resolve() // resolve on error to prevent hanging
+          img.src = card.thumbnail || card.imageUrl
+        })
+    )
+
+    Promise.all(promises).then(() => {
+      onReady?.()
+    })
+  }, [cards, onReady])
+
+  return null
+}
+
+export default function StellarCardGallery({ onReady }: { onReady?: () => void }) {
   return (
     <CardProvider>
+      <ImagePreloader onReady={onReady} />
       <div
         className="w-full h-screen relative overflow-hidden"
         style={{ backgroundColor: "#0a0006" }}
