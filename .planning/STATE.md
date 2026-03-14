@@ -61,7 +61,7 @@ Open items for content population (pre-launch):
 | 3 | SEO optimization: sitemap, robots, manifest, JSON-LD, OG metadata | 2026-03-14 | e69bf9c | Verified | [3-i-want-to-optimise-seo-for-this-website](./quick/3-i-want-to-optimise-seo-for-this-website/) |
 | 4 | Fix RSVP day selection bug: 1-based to 0-based indexing | 2026-03-14 | 75fdddf | Needs Review | [4-rsvp-bug-selecting-all-3-days-only-saves](./quick/4-rsvp-bug-selecting-all-3-days-only-saves/) |
 | 5 | Fix broken lightbox images in home page gallery | 2026-03-14 | 69be94d |  | [5-opening-an-image-from-home-page-photos-i](./quick/5-opening-an-image-from-home-page-photos-i/) |
-| 6 | Gallery loading screen with morph loading animation | 2026-03-14 | f589194 | Needs Review | [6-gallery-loading-screen-with-morph-loadin](./quick/6-gallery-loading-screen-with-morph-loadin/) |
+| 6 | Gallery loading screen with morph loading animation | 2026-03-14 | f589194 | Verified | [6-gallery-loading-screen-with-morph-loadin](./quick/6-gallery-loading-screen-with-morph-loadin/) |
 
 ## Session Continuity
 
