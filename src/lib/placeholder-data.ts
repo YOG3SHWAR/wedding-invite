@@ -10,7 +10,6 @@ export const PLACEHOLDER_GALLERY = [
   { id: 'g4', src: '/images/gallery/photo-04.jpg', alt: 'Yogi & Sudha — fun selfie at hillstation', width: 1280, height: 960 },
   { id: 'g5', src: '/images/gallery/photo-05.jpg', alt: 'Yogi & Sudha — adventure at cave', width: 960, height: 1280 },
   { id: 'g6', src: '/images/gallery/photo-06.jpg', alt: 'Sudha at campus', width: 960, height: 1280 },
-  { id: 'g7', src: '/images/gallery/photo-07.jpg', alt: 'Yogi & Sudha — couple selfie', width: 960, height: 1280 },
   { id: 'g8', src: '/images/gallery/photo-08.jpg', alt: 'Yogi & Sudha — dressed up evening', width: 1007, height: 1280 },
   { id: 'g9', src: '/images/gallery/photo-09.jpg', alt: 'Yogi & Sudha — water sports', width: 960, height: 1280 },
   { id: 'g10', src: '/images/gallery/photo-10.jpg', alt: 'Yogi & Sudha — family at car delivery', width: 1280, height: 960 },
