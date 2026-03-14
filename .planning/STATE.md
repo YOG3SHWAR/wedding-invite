@@ -5,7 +5,7 @@ milestone_name: Yogi Wedding Invite
 status: shipped
 stopped_at: v1.0 milestone archived
 last_updated: "2026-03-12T08:30:00.000Z"
-last_activity: 2026-03-14 - Completed quick task 6: Gallery loading screen with morph loading
+last_activity: 2026-03-14 - Completed quick task 7: Fix iOS safe area red strip, gallery double-tap, loading timing
 progress:
   total_phases: 4
   completed_phases: 4
@@ -62,9 +62,10 @@ Open items for content population (pre-launch):
 | 4 | Fix RSVP day selection bug: 1-based to 0-based indexing | 2026-03-14 | 75fdddf | Needs Review | [4-rsvp-bug-selecting-all-3-days-only-saves](./quick/4-rsvp-bug-selecting-all-3-days-only-saves/) |
 | 5 | Fix broken lightbox images in home page gallery | 2026-03-14 | 69be94d |  | [5-opening-an-image-from-home-page-photos-i](./quick/5-opening-an-image-from-home-page-photos-i/) |
 | 6 | Gallery loading screen with morph loading animation | 2026-03-14 | f589194 | Verified | [6-gallery-loading-screen-with-morph-loadin](./quick/6-gallery-loading-screen-with-morph-loadin/) |
+| 7 | Fix iOS safe area red strip, gallery double-tap, loading timing | 2026-03-14 | c753432 |  | [7-fix-red-strip-above-safe-area-double-tap](./quick/7-fix-red-strip-above-safe-area-double-tap/) |
 
 ## Session Continuity
 
 Last session: 2026-03-14
-Last activity: 2026-03-14 - Completed quick task 6: Gallery loading screen with morph loading
+Last activity: 2026-03-14 - Completed quick task 7: Fix iOS safe area red strip, gallery double-tap, loading timing
 Resume: Start next milestone with `/gsd:new-milestone`
