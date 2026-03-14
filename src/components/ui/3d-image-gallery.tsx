@@ -343,7 +343,7 @@ function CardModal() {
                 loading="lazy"
                 className="absolute inset-0 h-full w-full rounded-xl object-cover"
                 alt={selectedCard.alt}
-                src={`/_next/image?url=${encodeURIComponent(selectedCard.imageUrl)}&w=828&q=85`}
+                src={selectedCard.imageUrl}
                 style={{
                   boxShadow: "0 5px 20px rgba(0, 0, 0, 0.3)",
                 }}
